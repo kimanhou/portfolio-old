@@ -1,0 +1,18 @@
+.navigation {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: var(--size-nav-width);
+    height: var(--size-nav-height);
+    >*:nth-child(odd) {
+        width: 10.5vw;
+        margin-right: 2vw;
+    }
+    >*:nth-child(even) {
+        width: 12.5vw;
+        margin-right: 0;
+    }
+    >*:nth-child(2), >*:nth-child(1) {
+        margin-bottom: 10px;
+    }
+}

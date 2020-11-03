@@ -1,0 +1,39 @@
+@import './colors.scss';
+@import './sizes.scss';
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-off-black);
+    >.content {
+      flex: 1;
+    }
+    h1 {
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+    }
+    h3 {
+      margin: 0;
+    }
+    p {
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 40px;
+      font-family: Timeless;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-off-black);
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 40px;
+      font-family: Timeless;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

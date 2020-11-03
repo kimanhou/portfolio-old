@@ -1,0 +1,17 @@
+.square-name {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    width: var(--size-nav-width);
+    height: var(--size-nav-width);
+    border: solid 2px var(--color-off-black);
+    font-family: Kiona;
+    font-size: 10vw;
+    text-align: center;
+    >.square-name-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

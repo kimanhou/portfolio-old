@@ -1,0 +1,13 @@
+.navigation-link {
+    display: inline-block;
+    >a {
+        font-family: Kiona;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    >.navigation-link-border-top {
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-off-black);
+    }
+}
