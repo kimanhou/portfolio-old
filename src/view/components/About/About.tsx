@@ -4,7 +4,7 @@ import './About.scss';
 
 const About : React.FunctionComponent = props => {
   return (
-    <div className={`about`}>
+    <div className={`about`} style={{ backgroundImage: "url('noise/noise-black.png')"}}>
       <Navigation />
     </div>
   )

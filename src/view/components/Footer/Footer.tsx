@@ -26,7 +26,7 @@ const Footer : React.FunctionComponent = props => {
 
     return (
         <footer className={`footer`}>
-            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef}>
+            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
                 <div className={`footer-name-and-logo`}>
                     <Logo isFooter/>
                     <div className={`footer-name`}>
@@ -46,9 +46,9 @@ const Footer : React.FunctionComponent = props => {
                 </div>
                 <Navigation isFooter={true} />
                 <div className={`footer-social-container`}>
-                    <FooterSocial iconUrl="/social/instagram.png" link="https://www.instagram.com/kimanhou/" />
-                    <FooterSocial iconUrl="/social/github.png" link="https://github.com/kimanhou" />
-                    <FooterSocial iconUrl="/social/linkedin.png" link="https://www.linkedin.com/in/kanguyenlu/" />
+                    <FooterSocial iconUrl="social/instagram.png" link="https://www.instagram.com/kimanhou/" />
+                    <FooterSocial iconUrl="social/github.png" link="https://github.com/kimanhou" />
+                    <FooterSocial iconUrl="social/linkedin.png" link="https://www.linkedin.com/in/kanguyenlu/" />
                     <div>
                         <a href="mailto:kimanhou@gmail.com">kimanhou@gmail.com</a>
                     </div>
