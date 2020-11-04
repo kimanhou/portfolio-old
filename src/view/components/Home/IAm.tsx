@@ -27,7 +27,7 @@ const IAm : React.FunctionComponent = props => {
     }
 
     useEffect(() => {
-        writeText(0, 0);
+        setTimeout(() => writeText(0, 0), 1000);
     }, []);
 
     return (

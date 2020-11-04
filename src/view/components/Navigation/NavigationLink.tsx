@@ -12,7 +12,9 @@ interface INavigationLinkProps {
 const NavigationLink : React.FC<INavigationLinkProps> = props => {
     return (
         <div className={`navigation-link`}>
-            <div className={`navigation-link-border-top`}></div>
+            <div className={`navigation-link-border-container`}>
+                <div className={`navigation-link-border-top`}></div>
+            </div>
             <a href={props.link}><Text english={props.titleEnglish} french={props.titleFrench}/></a>
         </div>
     );

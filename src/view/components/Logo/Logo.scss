@@ -10,8 +10,16 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-        height: 5.5vh;
-        width: 5.5vh;
+        height: 40%;
+        width: 40%;
         background-color: var(--color-off-black);;
+    }
+    &.is-footer{
+        display: inline-block;
+        position: relative;
+        top: unset; 
+        left: unset;
+        width: 6.1vw;
+        height: 6.1vw;
     }
 }

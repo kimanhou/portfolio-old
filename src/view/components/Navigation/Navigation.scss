@@ -15,4 +15,10 @@
     >*:nth-child(2), >*:nth-child(1) {
         margin-bottom: 10px;
     }
+    &.is-footer{
+        float: right;
+        position: relative;
+        top: unset; 
+        right: unset;
+    }
 }

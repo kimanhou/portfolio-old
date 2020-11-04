@@ -5,9 +5,23 @@
         font-weight: bold;
         font-size: 25px;
     }
-    >.navigation-link-border-top {
-        height: 2px;
-        width: 100%;
-        background-color: var(--color-off-black);
+    >.navigation-link-border-container {
+        position: relative;
+        >.navigation-link-border-top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 2px;
+            width: 100%;
+            background-color: var(--color-off-black);
+            transition: width 0.8s;
+        }
+    }
+    &:hover {
+        >.navigation-link-border-container {
+            >.navigation-link-border-top {
+                width: 0%;
+            }
+        }
     }
 }
