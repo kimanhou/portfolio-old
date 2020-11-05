@@ -54,6 +54,27 @@
                 }
             }
         }
+        >.footer-social-container {
+            >.footer-email-container {
+                >.footer-email {
+                    &.pink {
+                        color: var(--color-pink);
+                        position: absolute;
+                        left: 50px;
+                        width: 0px;
+                        overflow: hidden;
+                        transition: width 0.8s;
+                    }
+                }
+                &:hover {
+                    >.footer-email {
+                        &.pink {
+                            width: 250px;
+                        }
+                    }
+                }
+            }
+        }
         >.footer-copyright {
             text-align: center;
             display: inline-block;

@@ -49,8 +49,9 @@ const Footer : React.FunctionComponent = props => {
                     <FooterSocial iconUrl="social/instagram.png" link="https://www.instagram.com/kimanhou/" />
                     <FooterSocial iconUrl="social/github.png" link="https://github.com/kimanhou" />
                     <FooterSocial iconUrl="social/linkedin.png" link="https://www.linkedin.com/in/kanguyenlu/" />
-                    <div>
-                        <a href="mailto:kimanhou@gmail.com">kimanhou@gmail.com</a>
+                    <div className={`footer-email-container`}>
+                        <a href="mailto:kimanhou@gmail.com" className={`footer-email`}>kimanhou@gmail.com</a>
+                        <a href="mailto:kimanhou@gmail.com" className={`footer-email pink`}>kimanhou@gmail.com</a>
                     </div>
                 </div>
                 <div className={`footer-copyright`}>
