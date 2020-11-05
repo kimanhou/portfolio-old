@@ -24,4 +24,14 @@
             }
         }
     }
+    &.is-white {
+        >a {
+            color: var(--color-off-white);
+        }
+        >.navigation-link-border-container {
+            >.navigation-link-border-top {
+                background-color: var(--color-off-white);
+            }
+        }
+    }
 }

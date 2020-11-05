@@ -8,10 +8,137 @@
     font-family: Kiona;
     font-size: 10vw;
     text-align: center;
+    overflow: hidden;
     >.square-name-text {
-        position: absolute;
-        top: 50%;
+        >.square-name-text-side {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+        }
+        >.square-name-cache {
+            position: absolute;
+            height: calc(var(--size-nav-width) / 2);
+            width: 100%;
+            &.line {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                >.square-name-cache-half {
+                    position: absolute;
+                    height: 50%;
+                    width: 100%;
+                    &.one {
+                        top: calc(-50% - 2px);
+                        background-color: violet;
+                    }
+                    &.two {
+                        top: calc(100% + 2px);
+                        background-color: pink;
+                    }
+                }
+            }
+            &.column {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                >.square-name-cache-half {
+                    position: absolute;
+                    height: 100%;
+                    width: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                    &.three {
+                        background-color: yellowgreen;
+                        left: calc(-50% - 2px);
+                    }
+                    &.four {
+                        background-color: green;
+                        left: calc(100% + 2px);
+                    }
+                }
+            }
+        }
+    }
+    &.is-moving {
+        >.square-name-text {
+            >.square-name-cache {
+                &.line {
+                    >.square-name-cache-half {
+                        &.one {
+                            animation: cacheMoveDown 1.2s linear 0s;
+                        }
+                        &.two {
+                            animation: cacheMoveUp 1.2s linear 0s;
+                        }
+                    }
+                }
+                &.column {
+                    >.square-name-cache-half {
+                        &.three {
+                            animation: cacheMoveLeft 0.9s linear 1s forwards;
+                        }
+                        &.four {
+                            animation: cacheMoveRight 0.9s linear 1s forwards;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes cacheMoveDown {
+    0% {
+        top: calc(-50% - 2px);
+    }
+    80% {
+        top: 0%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes cacheMoveUp {
+    0% {
+        top: calc(100% + 2px);
+    }
+    80% {
+        top: calc(50%);
+    }
+    100% {
+        top: calc(50%);
+    }
+}
+
+@keyframes cacheMoveLeft {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    100% {
+        left: calc(-50% - 2px);
+    }
+}
+
+@keyframes cacheMoveRight {
+    0% {
         left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+    }
+    20% {
+        left: 50%;
+    }
+    100% {
+        left: calc(100% + 2px);
     }
 }

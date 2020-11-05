@@ -7,11 +7,13 @@ interface INavigationLinkProps {
     titleEnglish : string;
     link : string;
     active : boolean;
+    isWhite ?: boolean;
 }
 
 const NavigationLink : React.FC<INavigationLinkProps> = props => {
+    const isWhite = props.isWhite ? "is-white" : "";
     return (
-        <div className={`navigation-link`}>
+        <div className={`navigation-link ${isWhite}`}>
             <div className={`navigation-link-border-container`}>
                 <div className={`navigation-link-border-top`}></div>
             </div>

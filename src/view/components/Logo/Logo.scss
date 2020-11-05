@@ -5,6 +5,7 @@
     width: var(--size-nav-height);
     height: var(--size-nav-height);
     border: solid 2px var(--color-off-black);
+    transition: transform 0.4s;
     >.logo-inside-square {
         position: absolute;
         top: 50%;
@@ -12,7 +13,7 @@
         transform: translateX(-50%) translateY(-50%);
         height: 40%;
         width: 40%;
-        background-color: var(--color-off-black);;
+        background-color: var(--color-off-black);
     }
     &.is-footer{
         display: inline-block;
@@ -21,5 +22,14 @@
         left: unset;
         width: 6.1vw;
         height: 6.1vw;
+    }
+    &:hover {
+        transform: scale(1.4);
+    }
+    &.is-white {
+        border: solid 2px var(--color-off-white);
+        >.logo-inside-square {
+            background-color: var(--color-off-white);;
+        }
     }
 }
