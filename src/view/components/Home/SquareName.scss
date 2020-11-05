@@ -34,11 +34,9 @@
                     width: 100%;
                     &.one {
                         top: calc(-50% - 2px);
-                        background-color: violet;
                     }
                     &.two {
                         top: calc(100% + 2px);
-                        background-color: pink;
                     }
                 }
             }
@@ -56,11 +54,9 @@
                     display: inline-block;
                     vertical-align: top;
                     &.three {
-                        background-color: yellowgreen;
                         left: calc(-50% - 2px);
                     }
                     &.four {
-                        background-color: green;
                         left: calc(100% + 2px);
                     }
                 }

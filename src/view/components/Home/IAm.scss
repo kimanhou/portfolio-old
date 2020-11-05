@@ -5,13 +5,37 @@
     font-family: Timeless;
     font-size: 30px;
     text-align: left;
-    >.i-am-cursor {
-        background-color: var(--color-off-black);
+    width: calc(100% - 100px - var(--size-nav-width) - 4px);
+    >.i-am-hello-world {
+        overflow: hidden;
+        height: 1em;
+        position: relative;
+        >.i-am-hello-world-content {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            animation: textGoesUp 0.2s linear 1s forwards;
+        }
+    }
+    >.i-am-i-am {
+        overflow: hidden;
         height: 40px;
-        width: 25px;
-        display: inline-block;
-        vertical-align: text-bottom;
-        animation: flash 1s linear 0s infinite;
+        position: relative;
+        line-height: 1em;
+        >.i-am-i-am-content {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            animation: textGoesUp 0.2s linear 1s forwards;
+            >.i-am-cursor {
+                background-color: var(--color-off-black);
+                height: 40px;
+                width: 25px;
+                display: inline-block;
+                vertical-align: text-bottom;
+                animation: flash 1s linear 0s infinite;
+            }
+        }
     }
 }
 
@@ -21,5 +45,14 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes textGoesUp {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0%;
     }
 }

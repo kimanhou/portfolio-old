@@ -27,15 +27,22 @@ const IAm : React.FunctionComponent = props => {
     }
 
     useEffect(() => {
-        setTimeout(() => writeText(0, 0), 1000);
+        setTimeout(() => writeText(0, 0), 2000);
     }, []);
 
     return (
         <div className={`i-am`}>
-            Hello world,
-            <br></br>
-            I am a {writtenText}
-            <div className={`i-am-cursor`}></div>
+            <div className={`i-am-hello-world`}>
+                <div className={`i-am-hello-world-content`}>
+                    Hello world,
+                </div>
+            </div>
+            <div className={`i-am-i-am`}>
+                <div className={`i-am-i-am-content`}>
+                    I am a {writtenText}
+                    <div className={`i-am-cursor`}></div>
+                </div>
+            </div>
         </div>
     )
 }
