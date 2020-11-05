@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Text from '../LocalisationContext/Text';
 import './NavigationLink.scss';
 
@@ -17,7 +18,7 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
             <div className={`navigation-link-border-container`}>
                 <div className={`navigation-link-border-top`}></div>
             </div>
-            <a href={props.link}><Text english={props.titleEnglish} french={props.titleFrench}/></a>
+            <Link to={props.link}><Text english={props.titleEnglish} french={props.titleFrench}/></Link>
         </div>
     );
 }

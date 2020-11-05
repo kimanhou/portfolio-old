@@ -1,4 +1,4 @@
-.contact {
+.services {
     height: 100vh;
     width: 100vw;
     background-repeat: repeat;
@@ -11,15 +11,6 @@
         text-align: center;
         >.contact-intro {
             font-family: Kiona;
-            font-size: 30px;
-            line-height: 45px;
-        }
-        >.contact-email {
-            margin-top: 4vw;
-            >a {
-                font-size: 8vw;
-                font-family: Timeless;
-            }
         }
     }
 }

@@ -31,6 +31,7 @@ const ScreenDetector : React.FC<IScreenDetectorProps> = props => {
 
     useEffect(() => {
         detects();
+        setTimeout(detects, 100);
         addEventListener('scroll', detects, false);
         return () => removeEventListener('scroll', detects, false);
     }, []);
