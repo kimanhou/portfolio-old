@@ -1,7 +1,7 @@
 .logo {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    // top: 50px;
+    // left: 50px;
     width: var(--size-nav-height);
     height: var(--size-nav-height);
     border: solid 2px var(--color-off-black);
@@ -34,8 +34,16 @@
         }
     }
     &.is-home {
+        top: 50px;
+        right: unset;
+        bottom: unset;
+        left: 50px;
     }
     &.is-about {
+        top: 50px;
+        right: unset;
+        bottom: unset;
+        left: 50px;
     }
     &.is-contact {
         top: 50px;
@@ -44,9 +52,15 @@
         left: unset;
     }
     &.is-work {
-        
+        top: 50px;
+        right: unset;
+        bottom: calc(100vh - 50px - var(--size-nav-height));
+        left: 50px;
     }
     &.is-services {
-        
+        top: 50px;
+        right: unset;
+        bottom: unset;
+        left: 50px;
     }
 }

@@ -28,10 +28,12 @@
     }
     >.services {
     position: absolute;
-    top: -100%;
+    top: 0;
     left: 0;
-    transition: top 1s;
+    height: 0;
+    transition: height 1s;
     transition-timing-function: cubic-bezier(1,0,0,1);
+    overflow: hidden;
     }
     >.work {
     position: absolute;
@@ -39,6 +41,11 @@
     left: 0;
     transition: top 1s;
     transition-timing-function: cubic-bezier(1,0,0,1);
+    }
+    &.is-home {
+        >.services {
+            height: 0;
+        }
     }
     &.is-route-about {
         >.about {
@@ -94,7 +101,7 @@
             height: 0;
         }
         >.services {
-            top: 0;
+            height: 100%;
         }
     }
 }
