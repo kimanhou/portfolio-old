@@ -7,8 +7,8 @@ import './Contact.scss';
 const Contact : React.FunctionComponent = props => {
   return (
     <div className={`contact`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
-      <Navigation />
-      <Logo />
+      <Navigation isContact={true}/>
+      <Logo isContact={true}/>
       <div className={`contact-content`}>
         <div className={`contact-intro`}>
           <div className={`contact-intro-line`}>

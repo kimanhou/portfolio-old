@@ -6,8 +6,8 @@ import './Work.scss';
 const Work : React.FunctionComponent = props => {
   return (
     <div className={`work`} style={{ backgroundImage: "url('noise/noise-black.png')"}}>
-      <Navigation isWhite={true}/>
-      <Logo isWhite={true}/>
+      <Navigation isWhite={true} isWork={true}/>
+      <Logo isWhite={true} isWork={true}/>
       WORK
     </div>
   )

@@ -6,8 +6,8 @@ import './Services.scss';
 const Services : React.FunctionComponent = props => {
   return (
     <div className={`services`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
-      <Navigation />
-      <Logo />
+      <Navigation isServices={true}/>
+      <Logo isServices={true}/>
       SERVICES
     </div>
   )

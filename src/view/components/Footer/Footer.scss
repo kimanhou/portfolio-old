@@ -13,9 +13,6 @@
         font-family: Kiona;
         background-repeat: repeat;
         border-top: solid 4px var(--color-off-black);
-        a {
-            font-family: Kiona;
-        }
         &.active {
             transform: translateX(0%);
             >.footer-name-and-logo {
@@ -43,6 +40,9 @@
         }
         >.footer-name-and-logo {
             margin-bottom: 30px;
+            a {
+                line-height: 40px;
+            }
             >.footer-name {
                 float: right;
                 font-size: 9.5vw;
@@ -55,7 +55,14 @@
             }
         }
         >.footer-social-container {
+            a {
+                font-family: Kiona;
+                line-height: 40px;
+                font-weight: 100;
+                font-size: 20px;
+            }
             >.footer-email-container {
+                width: 250px;
                 >.footer-email {
                     &.pink {
                         color: var(--color-pink);
