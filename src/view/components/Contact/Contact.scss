@@ -54,16 +54,13 @@
                         width: 0px;
                         overflow: hidden;
                         transition: width 0.8s;
-                        -webkit-text-fill-color: transparent;/* Will override color (regardless of order) */
+                        -webkit-text-fill-color: var(--color-off-white-background);
                         -webkit-text-stroke-width: 1px;
                         -webkit-text-stroke-color: var(--color-off-black);
                     }
                 }
                 &:hover {
                     >.contact-email-content-text {
-                        &.fill {
-                            color: transparent;
-                        }
                         &.outline {
                             width: 100%;
                         }

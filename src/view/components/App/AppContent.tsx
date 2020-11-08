@@ -25,26 +25,6 @@ const AppContent : React.FunctionComponent = props => {
 
   return (
       <div className={`App-content ${aboutClassname} ${contactClassname} ${workClassname} ${servicesClassname}`}>
-        {/* <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/work">
-            <Work />
-          </Route>
-          <Route path="/services">
-            <Services />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route> 
-        </Switch> */}
         <Home />
         <About/>
         <Contact/>

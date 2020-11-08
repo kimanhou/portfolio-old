@@ -6,7 +6,19 @@ import ScreenDetector from '../ScreenDetector/screenDetector';
 import './Footer.scss';
 import FooterSocial from './FooterSocial';
 
-const Footer : React.FunctionComponent = props => {
+interface IFooterProps {
+    isDark ?: boolean;
+}
+
+const Footer : React.FC<IFooterProps> = props => {
+    var isDarkClassname = props.isDark === true ? "is-dark" : "";
+
+    var backgroundImage = props.isDark === true ? "url('noise/noise-black.png')" : "url('noise/noise-white.png')";
+
+    var instagram = props.isDark === true ? "social/instagram-white.png" : "social/instagram.png";
+    var github = props.isDark === true ? "social/github-white.png" : "social/github.png";
+    var linkedin = props.isDark === true ? "social/linkedin-white.png" : "social/linkedin.png";
+
     var [onActiveClassname, setOnActiveClassname] = useState("");
     const onActive = () => {
         setOnActiveClassname("active");
@@ -25,10 +37,10 @@ const Footer : React.FunctionComponent = props => {
     });
 
     return (
-        <footer className={`footer`}>
-            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
+        <footer className={`footer ${isDarkClassname}`}>
+            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef} style={{ backgroundImage }}>
                 <div className={`footer-name-and-logo`}>
-                    <Logo isFooter/>
+                    <Logo isFooter isWhite={props.isDark} />
                     <div className={`footer-name`}>
                         <div className={`footer-name-letter`}><div className={`from-right`}>K</div></div>
                         <div className={`footer-name-letter`}><div className={`from-below`}>i</div></div>
@@ -44,11 +56,11 @@ const Footer : React.FunctionComponent = props => {
                         <div className={`footer-name-letter`}><div className={`from-left`}>n</div></div>
                     </div>
                 </div>
-                <Navigation isFooter={true} />
+                <Navigation isFooter={true} isWhite={props.isDark} />
                 <div className={`footer-social-container`}>
-                    <FooterSocial iconUrl="social/instagram.png" link="https://www.instagram.com/kimanhou/" />
-                    <FooterSocial iconUrl="social/github.png" link="https://github.com/kimanhou" />
-                    <FooterSocial iconUrl="social/linkedin.png" link="https://www.linkedin.com/in/kanguyenlu/" />
+                    <FooterSocial iconUrl={instagram} link="https://www.instagram.com/kimanhou/" />
+                    <FooterSocial iconUrl={github} link="https://github.com/kimanhou" />
+                    <FooterSocial iconUrl={linkedin} link="https://www.linkedin.com/in/kanguyenlu/" />
                     <div className={`footer-email-container`}>
                         <a href="mailto:kimanhou@gmail.com" className={`footer-email`}>kimanhou@gmail.com</a>
                         <a href="mailto:kimanhou@gmail.com" className={`footer-email pink`}>kimanhou@gmail.com</a>

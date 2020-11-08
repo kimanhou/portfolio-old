@@ -1,7 +1,5 @@
 .logo {
     position: absolute;
-    // top: 50px;
-    // left: 50px;
     width: var(--size-nav-height);
     height: var(--size-nav-height);
     border: solid 2px var(--color-off-black);
@@ -52,7 +50,7 @@
         left: unset;
     }
     &.is-work {
-        top: 50px;
+        top: unset;
         right: unset;
         bottom: calc(100vh - 50px - var(--size-nav-height));
         left: 50px;

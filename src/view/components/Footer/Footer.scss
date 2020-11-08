@@ -97,6 +97,15 @@
             bottom: 0;
         }
     }
+    &.is-dark {
+        >.footer-fixed {
+            color: var(--color-off-white);
+            border-color: var(--color-off-white);
+            a {
+                color: var(--color-off-white);
+            }
+        }
+    }
 }
 
 @keyframes fromLeft {

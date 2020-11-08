@@ -1,7 +1,5 @@
 .navigation {
     position: absolute;
-    // top: 50px;
-    // right: 50px;
     width: var(--size-nav-width);
     height: var(--size-nav-height);
     >*:nth-child(odd) {
@@ -40,9 +38,9 @@
         left: unset;
     }
     &.is-work {
-        top: 50px;
+        top: unset;
         right: 50px;
-        bottom: unset;
+        bottom: calc(100vh - 50px - var(--size-nav-height));
         left: unset;
     }
     &.is-services {
