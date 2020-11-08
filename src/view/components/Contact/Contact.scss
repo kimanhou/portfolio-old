@@ -34,7 +34,9 @@
             line-height: 11vw;
             a {
                 font-size: 8vw;
+                line-height: 9.5vw;
                 font-family: Timeless;
+                color: var(--color-off-black);
             }
             >.contact-email-content {
                 position: absolute;
@@ -42,6 +44,31 @@
                 transform: translateX(-50%);
                 top: 100%;
                 animation: textGoesUp 0.2s ease-in-out 0.6s forwards;
+                >.contact-email-content-text {
+                    &.fill {
+                        transition: color 0.8s;
+                    }
+                    &.outline {
+                        position: absolute;
+                        left: 0;
+                        width: 0px;
+                        overflow: hidden;
+                        transition: width 0.8s;
+                        -webkit-text-fill-color: transparent;/* Will override color (regardless of order) */
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: var(--color-off-black);
+                    }
+                }
+                &:hover {
+                    >.contact-email-content-text {
+                        &.fill {
+                            color: transparent;
+                        }
+                        &.outline {
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
