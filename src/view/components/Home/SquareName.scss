@@ -89,6 +89,14 @@
             }
         }
     }
+    &.is-white {
+        border-color: var(--color-off-white);
+        color: var(--color-off-white);
+    }
+    &.is-left {
+        left: 50px;
+        right: unset;
+    }
 }
 
 @keyframes cacheMoveDown {

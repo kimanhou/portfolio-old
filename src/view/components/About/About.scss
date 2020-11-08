@@ -2,4 +2,12 @@
     height: 100vh;
     width: 100vw;
     background-repeat: repeat;
+    >.about-portrait {
+        position: absolute;
+        right: 50px;
+        bottom: 0;
+        >img {
+            height: 85vh;
+        }
+    }
 }
