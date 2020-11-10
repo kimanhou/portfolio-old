@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import Text from '../LocalisationContext/Text';
 import './Contact.scss';
+import ContactSocial from './ContactSocial';
+import Expand from './Expand';
 
-const Contact : React.FunctionComponent = props => {
+interface IContactProps {
+  isVisible : boolean;
+}
+
+const Contact : React.FC<IContactProps> = props => {
+  var isVisibleClassname = props.isVisible ? "is-visible" : "";
+
+  var [isSocialVisible, setIsSocialVisible] = useState(false);
+  var isSocialVisibleClassname = isSocialVisible ? "is-social-visible" : "";
+
+  const onClickExpand = () => {setIsSocialVisible(!isSocialVisible);}
+
   return (
-    <div className={`contact`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
+    <div className={`contact ${isVisibleClassname}`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
       <Navigation isContact={true}/>
       <Logo isContact={true}/>
       <div className={`contact-content`}>
@@ -28,6 +41,16 @@ const Contact : React.FunctionComponent = props => {
               <a href="mailto:kimanhou@gmail.com" className={`contact-email-content-text outline`}>kimanhou@gmail.com</a>
               <a href="mailto:kimanhou@gmail.com" className={`contact-email-content-text fill`}>kimanhou@gmail.com</a>
             </div>
+        </div>
+      </div>
+      <div className={`contact-social-container`}>
+        <Expand onClick={onClickExpand} isExpanded={isSocialVisible}/>
+        <div className={`contact-social-container-content`}>
+          <div className={`contact-social-container-content-moving ${isSocialVisibleClassname}`}>
+            <ContactSocial text="INSTAGRAM" link="https://www.instagram.com/kimanhou/"/>
+            <ContactSocial text="GITHUB" link="https://github.com/kimanhou"/>
+            <ContactSocial text="LINKEDIN" link="https://www.linkedin.com/in/kanguyenlu/"/>
+          </div>
         </div>
       </div>
     </div>

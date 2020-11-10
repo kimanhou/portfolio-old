@@ -1,8 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useOnScreenResize } from '../../hooks/UseOnScreenResize';
-import Logo from '../Logo/Logo';
-import Navigation from '../Navigation/Navigation';
-import ScreenDetector from '../ScreenDetector/screenDetector';
+import React from 'react';
 import './FooterSocial.scss';
 
 interface IFooterSocialProps {

@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100vw;
     background-repeat: repeat;
+    color: var(--color-off-white);
     >.about-portrait {
         position: absolute;
         right: 50px;
@@ -9,6 +10,44 @@
         pointer-events: none;
         >img {
             height: 85vh;
+            display: inline-block;
+            margin-right: 30px;
         }
+        >.photo-credits {
+            display: inline-block;
+            position: absolute;
+            font-family: Kiona;
+            font-size: 15px;
+            right: 0;
+            bottom: 0;
+            transform: rotate(-90deg) translateX(100%) translateY(-100%);
+            transform-origin: top right;
+            pointer-events: auto;
+            >a {
+                font-family: Kiona;
+                font-size: 15px;
+                color: var(--color-off-white);
+                transition: color 0.2s;
+            }
+            &:hover {
+                >a {
+                    color: var(--color-pink);
+                }
+            }
+        }
+    }
+    >.about-intro {
+        font-family: Timeless;
+        position: absolute;
+        left: calc(50px + var(--size-nav-width) + 50px);
+        bottom: 100px;
+    }
+    >.about-text {
+        font-family: Timeless;
+        position: absolute;
+        left: 50px;
+        right: calc(50px + 380px);
+        top: 90vh;
+        height: 100vh;
     }
 }

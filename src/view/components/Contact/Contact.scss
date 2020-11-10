@@ -22,7 +22,7 @@
                     position: absolute;
                     width: 100%;
                     top: 100%;
-                    animation: textGoesUp 0.2s ease-in-out 0.6s forwards;
+                    transition: top 0.2s 1s;
                 }
             }
         }
@@ -43,18 +43,15 @@
                 left: 50%;
                 transform: translateX(-50%);
                 top: 100%;
-                animation: textGoesUp 0.2s ease-in-out 0.6s forwards;
+                transition: top 0.2s 1s;
                 >.contact-email-content-text {
-                    &.fill {
-                        transition: color 0.8s;
-                    }
                     &.outline {
                         position: absolute;
                         left: 0;
                         width: 0px;
                         overflow: hidden;
                         transition: width 0.8s;
-                        -webkit-text-fill-color: var(--color-off-white-background);
+                        -webkit-text-fill-color: var(--color-off-white);
                         -webkit-text-stroke-width: 1px;
                         -webkit-text-stroke-color: var(--color-off-black);
                     }
@@ -65,6 +62,43 @@
                             width: 100%;
                         }
                     }
+                }
+            }
+        }
+    }
+    >.contact-social-container {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        transform: rotate(-90deg) translateX(100%) translateY(-100%);
+        transform-origin: top right;
+        >.contact-social-expand {
+            display: inline-block;
+        }
+        >.contact-social-container-content {
+            overflow: hidden;
+            display: inline-block;
+            >.contact-social-container-content-moving {
+                transform: translateX(calc(-100% - 15px));
+                transition: transform 0.8s;
+                &.is-social-visible {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    &.is-visible {
+        >.contact-content {
+            >.contact-intro {
+                >.contact-intro-line {
+                    >.contact-intro-line-content {
+                        top: 0%;
+                    }
+                }
+            }
+            >.contact-email {
+                >.contact-email-content {
+                    top: 0%;
                 }
             }
         }

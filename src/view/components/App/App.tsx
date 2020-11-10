@@ -1,14 +1,13 @@
 import React from 'react';
-import { HashRouter, useRouteMatch } from "react-router-dom";
+import { useRouteMatch } from "react-router-dom";
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Home from '../Home/Home';
+import Services from '../Services/Services';
+import Work from '../Work/Work';
 import './App.scss';
 import './AppContent.scss';
-import AppContent from './AppContent';
-import Work from '../Work/Work';
-import Services from '../Services/Services';
 
 const App : React.FunctionComponent = props => {
   var matchAbout = useRouteMatch("/about");
@@ -29,8 +28,8 @@ const App : React.FunctionComponent = props => {
     <div className={`App`}>
       <div className={`App-content ${aboutClassname} ${contactClassname} ${workClassname} ${servicesClassname}`}>
         <Home />
-        <About/>
-        <Contact/>
+        <About isVisible={matchAbout !== null}/>
+        <Contact isVisible={matchContact !== null}/>
         <Work/>
         <Services/>
       </div>

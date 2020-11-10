@@ -1,0 +1,28 @@
+.contact-social {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+    position: relative;
+    >a {
+        font-family: Kiona;
+        font-size: 15px;
+        width: 100%;
+    }
+    >.text {
+        &.pink {
+            color: var(--color-pink);
+            position: absolute;
+            left: 0px;
+            width: 0px;
+            overflow: hidden;
+            transition: width 0.5s;
+        }
+    }
+    &:hover {
+        >.text {
+            &.pink {
+                width: 100%;
+            }
+        }
+    }
+}

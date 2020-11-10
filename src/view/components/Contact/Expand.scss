@@ -1,0 +1,15 @@
+.expand-icon {
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 20px;
+    .bar1, .bar2 {
+        transition: transform 0.8s;
+    }
+    .bar1 {
+        &.is-expanded {
+            transform: rotate(90deg);
+        }
+    }
+}
