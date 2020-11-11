@@ -7,7 +7,8 @@ import SquareName from './SquareName';
 
 const Home : React.FunctionComponent = props => {
   return (
-    <div className={`home`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
+    <div className={`home`}>
+      <div className={`home-background`} style={{ backgroundImage: "url('noise/noise-white.png')"}}></div>
       <Navigation isHome={true}/>
       <Logo isHome={true}/>
       <SquareName />
