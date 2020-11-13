@@ -24,8 +24,8 @@ const Navigation : React.FC<INavigationProps> = props => {
     <div className={`navigation ${isFooter} ${isHome} ${isAbout} ${isContact} ${isWork} ${isServices}`}>
       <NavigationLink titleFrench="À propos" titleEnglish="About" link="about" active={false} isWhite={props.isWhite}/>
       <NavigationLink titleFrench="Contact" titleEnglish="Contact" link="contact" active={false} isWhite={props.isWhite}/>
-      <NavigationLink titleFrench="Projets" titleEnglish="Work" link="work" active={false} isWhite={props.isWhite}/>
-      <NavigationLink titleFrench="Services" titleEnglish="Services" link="services" active={false} isWhite={props.isWhite}/>
+      {/* <NavigationLink titleFrench="Projets" titleEnglish="Work" link="work" active={false} isWhite={props.isWhite}/> */}
+      {/* <NavigationLink titleFrench="Services" titleEnglish="Services" link="services" active={false} isWhite={props.isWhite}/> */}
     </div>
   )
 }

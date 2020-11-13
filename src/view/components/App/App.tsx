@@ -38,8 +38,8 @@ const App : React.FunctionComponent = props => {
         <Home isVisible={matchHome !== null} displayedSquareNameText={displayedSquareNameText} setDisplayedSquareNameText={setDisplayedSquareNameText}/>
         <About isVisible={matchAbout !== null} displayedSquareNameText={displayedSquareNameText} setDisplayedSquareNameText={setDisplayedSquareNameText}/>
         <Contact isVisible={matchContact !== null}/>
-        <Work/>
-        <Services/>
+        {/* <Work/> */}
+        {/* <Services/> */}
       </div>
       <Footer isDark={footerIsDark}/>
     </div>
