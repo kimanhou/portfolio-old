@@ -1,11 +1,24 @@
 .footer {
+    >.footer-fixed-background {
+        top:-10rem;
+        left:-10rem;
+        width:calc(100% + 20rem);
+        height:calc(100% + 20rem);
+        z-index:-2;
+        content:'';
+        position:absolute;
+        pointer-events:none;
+        background-position:50%;
+        pointer-events:none;
+        animation:noise 1s steps(2) infinite;
+    }
     >.footer-fixed {
         pointer-events: auto;
         position: fixed;
         bottom: 0; 
         left: 0; 
         right: 0;
-        z-index: -1;
+        z-index: -2;
         color: var(--color-off-black);
         padding: 50px;
         transform: translateX(-100%);

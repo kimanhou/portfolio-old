@@ -1,12 +1,15 @@
 import React from 'react';
-import SquareName from '../Home/SquareName';
+import SquareName from '../SquareName/SquareName';
 import Text from '../LocalisationContext/Text';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import './About.scss';
+import { SquareNameText } from '../SquareName/SquareNameText';
 
 interface IAboutProps {
   isVisible : boolean;
+  displayedSquareNameText : SquareNameText;
+  setDisplayedSquareNameText : (displayedText : SquareNameText) => void;
 }
 
 const About : React.FC<IAboutProps> = props => {
@@ -15,7 +18,7 @@ const About : React.FC<IAboutProps> = props => {
     <div className={`about ${isVisibleClassname}`} style={{ backgroundImage: "url('noise/noise-black.png')"}}>
       <Navigation isWhite={true} isAbout={true}/>
       <Logo isWhite={true} isAbout={true}/>
-      <SquareName isWhite={true} isLeft={true}/>
+      <SquareName isWhite={true} isLeft={props.isVisible} displayedText={props.displayedSquareNameText} setDisplayedText={props.setDisplayedSquareNameText}/>
       <div className={`about-portrait`}>
         <img src="photos/portrait-blur.png" />
         <div className={`photo-credits`}>
@@ -23,11 +26,29 @@ const About : React.FC<IAboutProps> = props => {
         </div>
       </div>
       <div className={`about-intro`}>
-        Hello world,
+        <Text english="Kim Anh, born in 1991" french="Kim Anh, née en 1991" />
         <br></br>
-        my name is Kim Anh, I was born in 1991.
+        <Text english="I don't like the question " french="Je n'aime pas la question "/>
+        <i><Text english="&ldquo; Where do you come from ? &rdquo;" french="&ldquo; D'où viens-tu ? &rdquo;"/></i>
+        <Text english=". It could have so many meanings : Where were you an hour ago ? Where do you live ? Where did you grow up ? Where were you born ? Where did your parents grow up ? To all of these questions, I have a different answer." french=". "/>
       </div>
       <div className={`about-text`}>
+        <Text english="I'm a nomad. I like to see how people live around the world." french=""/>
+        <br></br>
+        <Text english="I'm a city girl. I've lived in Paris, Tokyo and London." french=""/>
+        <br></br>
+        <Text english="I'm a foodie with an obsession for sushi and pizza." french=""/>
+        <br></br>
+        <Text english="I'm a musician since age 7. My favourite composers are Chopin and Schumann. Yes I am a romantic." french="Je joue du piano depuis l'âge de 7 ans. Mes compositeurs préférés sont Chopin et Schumann. J'aime à penser que les romantiques étaient les rock stars de leur époque."/>
+        <br></br>
+        <Text english="I'm an explorer. Be it a famous hike or a new restaurant in town, I like to try new things." french=""/>
+        <br></br>
+        <Text english="I have 0 patience but I'm working on it. I started an impossible 1000 piece jigsaw." french=""/>
+        <br></br>
+        <Text english="I'm frank." french=""/>
+        <br></br>
+        <br></br>
+        <Text english="My brain mainly functions in French, dreams and work are usually in English, I used to speak fluently German, my parents speak to me in Vietnamese, I can order food in Spanish, I can ask my way in Japanese." french=""/>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero quis sapien ultrices lacinia in vitae elit. Phasellus sollicitudin tortor non augue suscipit ullamcorper. Donec scelerisque neque nunc, nec ornare nulla placerat blandit. Integer eget consectetur magna. Phasellus sed magna velit. Duis non sapien eget nibh dictum placerat at scelerisque velit. Etiam sed pellentesque turpis. Morbi condimentum mi ac lobortis auctor. Vestibulum sagittis nulla ac risus pretium tristique. Donec aliquet quis mauris vitae sagittis.
       <br></br>
       <br></br>

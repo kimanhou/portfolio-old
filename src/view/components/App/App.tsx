@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouteMatch } from "react-router-dom";
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Home from '../Home/Home';
 import Services from '../Services/Services';
+import { SquareNameText } from '../SquareName/SquareNameText';
 import Work from '../Work/Work';
 import './App.scss';
 import './AppContent.scss';
 
 const App : React.FunctionComponent = props => {
+  var matchHome = useRouteMatch({
+    path: "/",
+    exact: true,
+  });
+
   var matchAbout = useRouteMatch("/about");
   var aboutClassname = matchAbout !== null ? "is-route-about" : "";
 
@@ -24,11 +30,13 @@ const App : React.FunctionComponent = props => {
 
   var footerIsDark = (matchAbout !== null || matchWork !== null) ? true : false;
 
+  var [displayedSquareNameText, setDisplayedSquareNameText] = useState(SquareNameText.KimAnh);
+
   return (
     <div className={`App`}>
       <div className={`App-content ${aboutClassname} ${contactClassname} ${workClassname} ${servicesClassname}`}>
-        <Home />
-        <About isVisible={matchAbout !== null}/>
+        <Home isVisible={matchHome !== null} displayedSquareNameText={displayedSquareNameText} setDisplayedSquareNameText={setDisplayedSquareNameText}/>
+        <About isVisible={matchAbout !== null} displayedSquareNameText={displayedSquareNameText} setDisplayedSquareNameText={setDisplayedSquareNameText}/>
         <Contact isVisible={matchContact !== null}/>
         <Work/>
         <Services/>

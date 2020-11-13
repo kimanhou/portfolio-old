@@ -42,12 +42,14 @@
         right: unset;
         bottom: unset;
         left: 50px;
+        z-index:2;
     }
     &.is-contact {
         top: 50px;
         right: calc(100vw - 50px - var(--size-nav-height));
         bottom: unset;
         left: unset;
+        z-index:2;
     }
     &.is-work {
         top: unset;

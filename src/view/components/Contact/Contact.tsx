@@ -19,7 +19,8 @@ const Contact : React.FC<IContactProps> = props => {
   const onClickExpand = () => {setIsSocialVisible(!isSocialVisible);}
 
   return (
-    <div className={`contact ${isVisibleClassname}`} style={{ backgroundImage: "url('noise/noise-white.png')"}}>
+    <div className={`contact ${isVisibleClassname}`} >
+      <div className={`contact-background`} style={{ backgroundImage: "url('noise/noise-white.png')"}}></div>
       <Navigation isContact={true}/>
       <Logo isContact={true}/>
       <div className={`contact-content`}>

@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './IAm.scss';
 
-const IAm : React.FunctionComponent = props => {
+interface IIAmProps {
+    isVisible : boolean;
+}
+
+const IAm : React.FC<IIAmProps> = props => {
+    var isVisibleClassname = props.isVisible ? "is-visible" : ""
+
     const WhatIAm = [`web developer.`, `web designer.`, `freelancer.`, `digital nomad.`, `minimalist.`];
 
     var [writtenText, setWrittenText] = useState("");
@@ -31,7 +37,7 @@ const IAm : React.FunctionComponent = props => {
     }, []);
 
     return (
-        <div className={`i-am`}>
+        <div className={`i-am ${isVisibleClassname}`}>
             <div className={`i-am-hello-world`}>
                 <div className={`i-am-hello-world-content`}>
                     Hello world,

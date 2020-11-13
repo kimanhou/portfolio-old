@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './SquareName.scss';
+import { SquareNameText } from './SquareNameText';
 
 interface ISquareNameProps {
   isWhite ?: boolean;
   isLeft ?: boolean;
+  displayedText : SquareNameText;
+  setDisplayedText : (displayedText : SquareNameText) => void;
 }
 
 const SquareName : React.FC<ISquareNameProps> = props => {
   var [isMoving, setIsMoving] = useState(false);
-  var [displayedText, setDisplayedText] = useState("Kim Anh");
   const animationDuration = 2000;
   var isMovingClassname = isMoving ? "is-moving" : "";
   var isWhite = props.isWhite === true ? "is-white" : "";
@@ -19,11 +21,11 @@ const SquareName : React.FC<ISquareNameProps> = props => {
   const onMouseEnter = (event: React.MouseEvent<HTMLDivElement>) => {
     if (isMoving === false) {
       setIsMoving(true);
-      if (displayedText === "Kim Anh") {
-        setTimeout(() =>setDisplayedText("Ngu yen"), animationDuration / 2);
+      if (props.displayedText === SquareNameText.KimAnh) {
+        setTimeout(() => props.setDisplayedText(SquareNameText.Nguyen), animationDuration / 2);
       }
       else {
-        setTimeout(() =>setDisplayedText("Kim Anh"), animationDuration / 2);
+        setTimeout(() => props.setDisplayedText(SquareNameText.KimAnh), animationDuration / 2);
       }
       setTimeout(() => { setIsMoving(false) }, animationDuration);
     }
@@ -33,7 +35,7 @@ const SquareName : React.FC<ISquareNameProps> = props => {
     <div className={`square-name ${isMovingClassname} ${isWhite} ${isLeft}`} onMouseEnter={onMouseEnter}>
         <div className={`square-name-text`}>
             <div className={`square-name-text-side`}>
-              {displayedText}
+              {props.displayedText}
             </div>
             <div className={`square-name-cache line`} >
               <div className={`square-name-cache-half one`} style={{ backgroundImage: backgroundImage}}></div>

@@ -38,7 +38,8 @@ const Footer : React.FC<IFooterProps> = props => {
 
     return (
         <footer className={`footer ${isDarkClassname}`}>
-            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef} style={{ backgroundImage }}>
+            <div className={`footer-fixed-background`} style={{ backgroundImage }}></div>
+            <div className={`footer-fixed ${onActiveClassname}`} ref={fixedRef} >
                 <div className={`footer-name-and-logo`}>
                     <Logo isFooter isWhite={props.isDark} />
                     <div className={`footer-name`}>
