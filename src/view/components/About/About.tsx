@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { HtmlHTMLAttributes, useRef, useState } from 'react';
 import SquareName from '../SquareName/SquareName';
 import Text from '../LocalisationContext/Text';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import './About.scss';
 import { SquareNameText } from '../SquareName/SquareNameText';
+import ScreenDetector from '../ScreenDetector/screenDetector';
 
 interface IAboutProps {
   isVisible : boolean;
@@ -14,8 +15,29 @@ interface IAboutProps {
 
 const About : React.FC<IAboutProps> = props => {
   var isVisibleClassname = props.isVisible ? "is-visible" : "";
+
+  var [onActiveWorkClassname, setOnActiveWorkClassname] = useState("");
+  const onActiveWork = () => {
+    setOnActiveWorkClassname("active");
+  }
+
+  const onUnactiveWork = () => {
+    setOnActiveWorkClassname("");
+  }
+
+  var [onActiveLifeClassname, setOnActiveLifeClassname] = useState("");
+  const onActiveLife = () => {
+    setOnActiveLifeClassname("active");
+  }
+
+  const onUnactiveLife = () => {
+    setOnActiveLifeClassname("");
+  }
+
+  const [aboutRef, setAboutRef] = useState<HTMLDivElement | null>(null);
+
   return (
-    <div className={`about ${isVisibleClassname}`} style={{ backgroundImage: "url('noise/noise-black.png')"}}>
+    <div className={`about ${isVisibleClassname}`} ref={setAboutRef} style={{ backgroundImage: "url('noise/noise-black.png')"}}>
       <Navigation isWhite={true} isAbout={true}/>
       <Logo isWhite={true} isAbout={true}/>
       <SquareName isWhite={true} isLeft={props.isVisible} displayedText={props.displayedSquareNameText} setDisplayedText={props.setDisplayedSquareNameText}/>
@@ -26,29 +48,52 @@ const About : React.FC<IAboutProps> = props => {
         </div>
       </div>
       <div className={`about-intro`}>
-        <Text english="Kim Anh, born in 1991" french="Kim Anh, née en 1991" />
-        <br></br>
         <Text english="I don't like the question " french="Je n'aime pas la question "/>
         <i><Text english="&ldquo; Where do you come from ? &rdquo;" french="&ldquo; D'où viens-tu ? &rdquo;"/></i>
-        <Text english=". It could have so many meanings : Where were you an hour ago ? Where do you live ? Where did you grow up ? Where were you born ? Where did your parents grow up ? To all of these questions, I have a different answer." french=". "/>
+        <Text english=". It could have so many meanings depending who is asking and when : Where do you live ? Where did you grow up ? Where were you born ? Where did your parents grow up ? To all of these questions, I have a different answer." 
+              french=". "/>
       </div>
       <div className={`about-text`}>
-        <Text english="I'm a nomad. I like to see how people live around the world." french=""/>
-        <br></br>
-        <Text english="I'm a city girl. I've lived in Paris, Tokyo and London." french=""/>
-        <br></br>
-        <Text english="I'm a foodie with an obsession for sushi and pizza." french=""/>
-        <br></br>
-        <Text english="I'm a musician since age 7. My favourite composers are Chopin and Schumann. Yes I am a romantic." french="Je joue du piano depuis l'âge de 7 ans. Mes compositeurs préférés sont Chopin et Schumann. J'aime à penser que les romantiques étaient les rock stars de leur époque."/>
-        <br></br>
-        <Text english="I'm an explorer. Be it a famous hike or a new restaurant in town, I like to try new things." french=""/>
-        <br></br>
-        <Text english="I have 0 patience but I'm working on it. I started an impossible 1000 piece jigsaw." french=""/>
-        <br></br>
-        <Text english="I'm frank." french=""/>
+        <div className={`about-text-title ${onActiveWorkClassname}`}>
+          <div className={`about-text-title-line-before`}></div>
+          <div className={`about-text-title-text`}>Work</div>
+          <div className={`about-text-title-line`}>
+            <div className={`about-text-title-line-inside`}></div>
+          </div>
+          <ScreenDetector scrollRef={aboutRef} onActive={onActiveWork} onUnactive={onUnactiveWork} className={`screen-detector-work`}/>
+        </div>
+        <Text english="4 years in London at Société Générale as a developer. I worked for the front office team of the Commodities department." 
+              french="4 ans à Londres à la Société Générale en tant que développeuse."/>
         <br></br>
         <br></br>
-        <Text english="My brain mainly functions in French, dreams and work are usually in English, I used to speak fluently German, my parents speak to me in Vietnamese, I can order food in Spanish, I can ask my way in Japanese." french=""/>
+        <div className={`about-text-title ${onActiveLifeClassname}`}>
+          <div className={`about-text-title-text`}>Life</div>
+          <div className={`about-text-title-line`}>
+            <div className={`about-text-title-line-inside`}></div>
+          </div>
+          <ScreenDetector scrollRef={aboutRef} onActive={onActiveLife} onUnactive={onUnactiveLife} className={`screen-detector-life`}/>
+        </div>
+        <br></br>
+        <Text english="My brain mainly functions in French, my dreams and work are usually in English, I used to speak fluently German, my parents speak to me in Vietnamese, I can order food in Spanish, I can ask my way in Japanese." 
+              french="Mon cerveau fonctionne principalement en français, je rêve et travaille généralement en anglais, je parlais couramment allemand à une époque, mes parents me parlent en vietnamien, je peux commander au restaurant en espagnol et demander mon chemin en japonais."/>
+        <br></br>
+        <br></br>
+        <Text english="Nomad. I like to see how people live around the world." french="Nomade. J'aime découvrir comment les gens vivent à travers le monde."/>
+        <br></br>
+        <Text english="City girl. I've lived in Paris, Tokyo and London." french="Citadine. J'ai vécu à Paris, Tokyo et Londres."/>
+        <br></br>
+        <Text english="Foodie. With an obsession for sushi and pizza." french="Foodie. Avec une obsession pour le bon pain, les sushis et les pizzas."/>
+        <br></br>
+        <Text english="Musician since age 7. My favourite composers are Chopin and Schumann. Yes I am a romantic." french="Je joue du piano depuis l'âge de 7 ans. Mes compositeurs préférés sont Chopin et Schumann. J'aime à penser que les romantiques étaient les rock stars de leur époque."/>
+        <br></br>
+        <Text english="Explorer. Be it a famous hike or a new restaurant in town, I like to try new things." french="Exploratrice. Que ce soit une randonnée connue ou un nouveau restaurant dans le quartier, j'aime expérimenter de nouvelles choses."/>
+        <br></br>
+        <Text english="0 patience but I'm working on it. I started an impossible 1000 piece jigsaw." french="Aucune patience mais j'y travaille. J'ai commencé un puzzle impossible de 1000 pièces."/>
+        <br></br>
+        <Text english="Honest. Some people would say too honest." french="Honnête. Certains diront trop honnête."/>
+        <br></br>
+        <br></br>
+        
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero quis sapien ultrices lacinia in vitae elit. Phasellus sollicitudin tortor non augue suscipit ullamcorper. Donec scelerisque neque nunc, nec ornare nulla placerat blandit. Integer eget consectetur magna. Phasellus sed magna velit. Duis non sapien eget nibh dictum placerat at scelerisque velit. Etiam sed pellentesque turpis. Morbi condimentum mi ac lobortis auctor. Vestibulum sagittis nulla ac risus pretium tristique. Donec aliquet quis mauris vitae sagittis.
       <br></br>
       <br></br>
