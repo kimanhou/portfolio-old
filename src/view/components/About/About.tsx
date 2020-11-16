@@ -6,6 +6,8 @@ import Navigation from '../Navigation/Navigation';
 import './About.scss';
 import { SquareNameText } from '../SquareName/SquareNameText';
 import ScreenDetector from '../ScreenDetector/screenDetector';
+import AboutTitle from './AboutTitle';
+import AboutKeyword from './AboutKeyword';
 
 interface IAboutProps {
   isVisible : boolean;
@@ -16,14 +18,14 @@ interface IAboutProps {
 const About : React.FC<IAboutProps> = props => {
   var isVisibleClassname = props.isVisible ? "is-visible" : "";
 
-  var [onActiveCurrentStatusClassname, setOnActiveCurrentStatusClassname] = useState("");
-  const onActiveCurrentStatus = () => {
-    setOnActiveCurrentStatusClassname("active");
-  }
+  // var [onActiveCurrentStatusClassname, setOnActiveCurrentStatusClassname] = useState("");
+  // const onActiveCurrentStatus = () => {
+  //   setOnActiveCurrentStatusClassname("active");
+  // }
 
-  const onUnactiveCurrentStatus = () => {
-    setOnActiveCurrentStatusClassname("");
-  }
+  // const onUnactiveCurrentStatus = () => {
+  //   setOnActiveCurrentStatusClassname("");
+  // }
 
   var [onActiveWorkClassname, setOnActiveWorkClassname] = useState("");
   const onActiveWork = () => {
@@ -63,17 +65,10 @@ const About : React.FC<IAboutProps> = props => {
               french=". "/>
       </div>
       <div className={`about-text`}>
-        <div className={`about-text-title ${onActiveCurrentStatusClassname}`}>
-            <div className={`about-text-title-line-before`}></div>
-            <div className={`about-text-title-text`}><Text english="Current status" french=""/></div>
-            <div className={`about-text-title-line`}>
-              <div className={`about-text-title-line-inside`}></div>
-            </div>
-            <ScreenDetector scrollRef={aboutRef} onActive={onActiveCurrentStatus} onUnactive={onUnactiveCurrentStatus} className={`screen-detector-work`}/>
-          </div>
+          <AboutTitle title={<Text english="Current status" french="Situation actuelle"/>} aboutRef={aboutRef}/>
           &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I left London in Septembre 2019 to " 
                 french="J'ai quitté Londres en septembre 2019 pour "/>
-          <span className="kiona"><span className="kiona-background"></span><Text english="travel around the world" french="un tour du monde"/></span>
+          <AboutKeyword text={<Text english="travel around the world" french="un tour du monde"/>} />
           <Text english=". I started with Europe before making my way to South East Asia. I was in Thailand when the COVID-19 pandemic hit the world and had to return to France at the end of March 2020." 
                 french=". J'ai commencé par l'Europe avant de continuer mon chemin vers l'Asie du Sud-Est. J'étais en Thaïlande lorsque la pandémie de la COVID-19 a frappé le monde et j'ai ainsi dû rentrer en France fin mars 2020."/>
           <br></br>
@@ -82,43 +77,33 @@ const About : React.FC<IAboutProps> = props => {
           <a href="http://lescovideastes.fr/" target='_blank'><Text english="Wordpress website" french ="site Wordpress"/></a>
           <Text english=" and to help two local businesses create their website. To do so, I learned " 
                 french =" et aider deux petits commerces à créer leur site web. Pour cela, j'ai appris "/>
-          <span className="kiona"><span className="kiona-background"></span><Text english="React" french="React"/></span>
+          <AboutKeyword text={<Text english="React" french="React"/>} />
           <Text english=" and Typescript on my own. I also took an online 4 course specialization at Calarts on Coursera to learn more about " 
                 french=" et Typescript en autonomie. J'ai également suivi une spécialisation en ligne à Calarts sur Coursera pour en apprendre davantage sur le "/>
-          <span className="kiona"><span className="kiona-background"></span><Text english="UX and UI design" french="design UX et UI"/></span>
+          <AboutKeyword text={<Text english="UX and UI design" french="design UX et UI"/>} />
           <Text english="." french="."/>
           <br></br>
           &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I am looking for "
                 french="Je suis à la recherche d'" />
-          <span className="kiona"><span className="kiona-background"></span><Text english="short opportunities" french="opportunités courtes"/></span>
+          <AboutKeyword text={<Text english="short opportunities" french="opportunités courtes"/>} />
           <Text english=" while waiting for the sanitary situation to improve enough to allow me to keep travelling." french=" en attendant que la situation sanitaire ne s'améliore et de pouvoir reprendre les voyages."/>
           <br></br>
           <br></br>
-        <div className={`about-text-title ${onActiveWorkClassname}`}>
-          <div className={`about-text-title-line-before`}></div>
-          <div className={`about-text-title-text`}>Work</div>
-          <div className={`about-text-title-line`}>
-            <div className={`about-text-title-line-inside`}></div>
-          </div>
-          <ScreenDetector scrollRef={aboutRef} onActive={onActiveWork} onUnactive={onUnactiveWork} className={`screen-detector-work`}/>
-        </div>
+          
+        <AboutTitle title={<Text english="Work" french="Expérience"/>} aboutRef={aboutRef}/>
         <Text english="4 years in London at Société Générale as a developer. I worked for the front office team of the Commodities department." 
               french="4 ans à Londres à la Société Générale en tant que développeuse."/>
         <br></br>
         <br></br>
-        <div className={`about-text-title ${onActiveLifeClassname}`}>
-          <div className={`about-text-title-line-before`}></div>
-          <div className={`about-text-title-text`}>Life</div>
-            <div className={`about-text-title-line`}>
-              <div className={`about-text-title-line-inside`}></div>
-            </div>
-          <ScreenDetector scrollRef={aboutRef} onActive={onActiveLife} onUnactive={onUnactiveLife} className={`screen-detector-life`}/>
-        </div>
+        
+        <AboutTitle title={<Text english="Languages" french="Langues"/>} aboutRef={aboutRef}/>
         <br></br>
         <Text english="My brain mainly functions in French, my dreams and work are usually in English, I used to speak fluently German, my parents speak to me in Vietnamese, I can order food in Spanish, I can ask my way in Japanese." 
               french="Mon cerveau fonctionne principalement en français, je rêve et travaille généralement en anglais, je parlais couramment allemand à une époque, mes parents me parlent en vietnamien, je peux commander au restaurant en espagnol et demander mon chemin en japonais."/>
         <br></br>
         <br></br>
+
+        <AboutTitle title={<Text english="Hobbies" french="Hobbies"/>} aboutRef={aboutRef}/>
         <Text english="Nomad. I like to see how people live around the world." french="Nomade. J'aime découvrir comment les gens vivent à travers le monde."/>
         <br></br>
         <Text english="City girl. I've lived in Paris, Tokyo and London." french="Citadine. J'ai vécu à Paris, Tokyo et Londres."/>

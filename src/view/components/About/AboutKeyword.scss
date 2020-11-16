@@ -1,0 +1,20 @@
+.about-keyword {
+    font-family: Kiona;
+    position: relative;
+    white-space: nowrap;
+    >.about-keyword-background {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-pink);
+        height: calc(var(--size-font-text) / 2);
+        z-index: -1;
+        transform: skewX(-30deg);
+    }
+    &:hover {
+        >.about-keyword-background {
+            animation: grow 0.6s linear;
+        }
+    }
+}
