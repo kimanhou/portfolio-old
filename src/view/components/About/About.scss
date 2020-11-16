@@ -63,29 +63,9 @@
         right: calc(50px + 50vh + 50px);
         top: 90vh;
         height: 100vh;
-        >a {
+        a {
             color: var(--color-off-white);
         }
-        // .kiona {
-        //     font-family: Kiona;
-        //     position: relative;
-        //     white-space: nowrap;
-        //     >.kiona-background {
-        //         position: absolute;
-        //         bottom: -2px;
-        //         left: 0;
-        //         width: 100%;
-        //         background-color: var(--color-pink);
-        //         height: calc(var(--size-font-text) / 2);
-        //         z-index: -1;
-        //         transform: skewX(-30deg);
-        //     }
-        //     &:hover {
-        //         >.kiona-background {
-        //             animation: grow 0.6s linear;
-        //         }
-        //     }
-        // }
         .transparent {
             -webkit-text-fill-color: var(--color-background-blakc);
             -webkit-text-stroke-width: 1px;
