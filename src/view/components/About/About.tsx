@@ -16,6 +16,15 @@ interface IAboutProps {
 const About : React.FC<IAboutProps> = props => {
   var isVisibleClassname = props.isVisible ? "is-visible" : "";
 
+  var [onActiveCurrentStatusClassname, setOnActiveCurrentStatusClassname] = useState("");
+  const onActiveCurrentStatus = () => {
+    setOnActiveCurrentStatusClassname("active");
+  }
+
+  const onUnactiveCurrentStatus = () => {
+    setOnActiveCurrentStatusClassname("");
+  }
+
   var [onActiveWorkClassname, setOnActiveWorkClassname] = useState("");
   const onActiveWork = () => {
     setOnActiveWorkClassname("active");
@@ -54,6 +63,37 @@ const About : React.FC<IAboutProps> = props => {
               french=". "/>
       </div>
       <div className={`about-text`}>
+        <div className={`about-text-title ${onActiveCurrentStatusClassname}`}>
+            <div className={`about-text-title-line-before`}></div>
+            <div className={`about-text-title-text`}><Text english="Current status" french=""/></div>
+            <div className={`about-text-title-line`}>
+              <div className={`about-text-title-line-inside`}></div>
+            </div>
+            <ScreenDetector scrollRef={aboutRef} onActive={onActiveCurrentStatus} onUnactive={onUnactiveCurrentStatus} className={`screen-detector-work`}/>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I left London in Septembre 2019 to " 
+                french="J'ai quitté Londres en septembre 2019 pour "/>
+          <span className="kiona"><span className="kiona-background"></span><Text english="travel around the world" french="un tour du monde"/></span>
+          <Text english=". I started with Europe before making my way to South East Asia. I was in Thailand when the COVID-19 pandemic hit the world and had to return to France at the end of March 2020." 
+                french=". J'ai commencé par l'Europe avant de continuer mon chemin vers l'Asie du Sud-Est. J'étais en Thaïlande lorsque la pandémie de la COVID-19 a frappé le monde et j'ai ainsi dû rentrer en France fin mars 2020."/>
+          <br></br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<Text english="During lockdown, I was asked by relatives to give a hand on a "
+                french="Pendant le confinement, j'ai été sollicitée par des proches pour donner un coup de main sur un " />
+          <a href="http://lescovideastes.fr/" target='_blank'><Text english="Wordpress website" french ="site Wordpress"/></a>
+          <Text english=" and to help two local businesses create their website. To do so, I learned " 
+                french =" et aider deux petits commerces à créer leur site web. Pour cela, j'ai appris "/>
+          <span className="kiona"><span className="kiona-background"></span><Text english="React" french="React"/></span>
+          <Text english=" and Typescript on my own. I also took an online 4 course specialization at Calarts on Coursera to learn more about " 
+                french=" et Typescript en autonomie. J'ai également suivi une spécialisation en ligne à Calarts sur Coursera pour en apprendre davantage sur le "/>
+          <span className="kiona"><span className="kiona-background"></span><Text english="UX and UI design" french="design UX et UI"/></span>
+          <Text english="." french="."/>
+          <br></br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I am looking for "
+                french="Je suis à la recherche d'" />
+          <span className="kiona"><span className="kiona-background"></span><Text english="short opportunities" french="opportunités courtes"/></span>
+          <Text english=" while waiting for the sanitary situation to improve enough to allow me to keep travelling." french=" en attendant que la situation sanitaire ne s'améliore et de pouvoir reprendre les voyages."/>
+          <br></br>
+          <br></br>
         <div className={`about-text-title ${onActiveWorkClassname}`}>
           <div className={`about-text-title-line-before`}></div>
           <div className={`about-text-title-text`}>Work</div>
@@ -67,10 +107,11 @@ const About : React.FC<IAboutProps> = props => {
         <br></br>
         <br></br>
         <div className={`about-text-title ${onActiveLifeClassname}`}>
+          <div className={`about-text-title-line-before`}></div>
           <div className={`about-text-title-text`}>Life</div>
-          <div className={`about-text-title-line`}>
-            <div className={`about-text-title-line-inside`}></div>
-          </div>
+            <div className={`about-text-title-line`}>
+              <div className={`about-text-title-line-inside`}></div>
+            </div>
           <ScreenDetector scrollRef={aboutRef} onActive={onActiveLife} onUnactive={onUnactiveLife} className={`screen-detector-life`}/>
         </div>
         <br></br>

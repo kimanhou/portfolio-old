@@ -57,14 +57,34 @@
     >.about-text {
         font-family: Timeless;
         font-size: var(--size-font-text);
-        line-height: calc(var(--size-font-text) * 1.5);
+        line-height: calc(var(--size-font-text) * 1.7);
         position: absolute;
         left: 50px;
         right: calc(50px + 50vh + 50px);
         top: 90vh;
         height: 100vh;
+        >a {
+            color: var(--color-off-white);
+        }
         .kiona {
             font-family: Kiona;
+            position: relative;
+            white-space: nowrap;
+            >.kiona-background {
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-pink);
+                height: calc(var(--size-font-text) / 2);
+                z-index: -1;
+                transform: skewX(-30deg);
+            }
+            &:hover {
+                >.kiona-background {
+                    animation: grow 0.6s linear;
+                }
+            }
         }
         .transparent {
             -webkit-text-fill-color: var(--color-background-blakc);
@@ -72,8 +92,6 @@
             -webkit-text-stroke-color: var(--color-off-white);
         }
         >.about-text-title {
-            font-size: calc(var(--size-font-text) * 4);
-            line-height: calc(var(--size-font-text) * 1.5 * 4);
             -webkit-text-fill-color: var(--color-background-black);
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: var(--color-off-white);
@@ -81,6 +99,7 @@
             display: flex;
             flex-direction: row;
             align-items : center;
+            margin-bottom: 30px;
             >.about-text-title-line-before {
                 height: 1px;
                 width: 0px;
@@ -91,6 +110,8 @@
                 display: inline-block;
                 margin-right: 30px;
                 transition: margin-left 0.8s;
+                font-size: calc(var(--size-font-text) * 4);
+                line-height: calc(var(--size-font-text) * 4);
             }
             >.about-text-title-line {
                 flex: 1;
@@ -112,12 +133,21 @@
             }
             &:hover {
                 >.about-text-title-line-before {
-                    width: 30px;
+                    width: 60px;
                 }
                 >.about-text-title-text {
                     margin-left: 30px;
                 }
             }
         }
+    }
+}
+
+@keyframes grow {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
     }
 }
