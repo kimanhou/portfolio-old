@@ -9,7 +9,7 @@ import AboutCurrentStatus from './Sections/AboutCurrentStatus';
 import AboutTitle from './AboutTitle';
 import AboutWork from './Sections/AboutWork';
 import AboutLanguages from './Sections/AboutLanguages';
-import AboutHobbies from './Sections/AboutHobbies';
+import AboutHobbies from './Sections/Hobbies/AboutHobbies';
 import AboutEducation from './Sections/AboutEducation';
 import AboutPersonalProjects from './Sections/AboutPersonalProjects';
 import Languages from '../Languages/Languages';
@@ -36,10 +36,10 @@ const About : React.FC<IAboutProps> = props => {
         </div>
       </div>
       <div className={`about-intro`}>
-        <Text english="I don't like the question " french="Je n'aime pas la question "/>
+        {/* <Text english="I don't like the question " french="Je n'aime pas la question "/>
         <i><Text english="&ldquo; Where do you come from ? &rdquo;" french="&ldquo; D'où viens-tu ? &rdquo;"/></i>
         <Text english=". It could have so many meanings depending who is asking and when : Where do you live ? Where did you grow up ? Where were you born ? Where did your parents grow up ? To all of these questions, I have a different answer." 
-              french=". "/>
+              french=". "/> */}
       </div>
       <div className={`about-text`}>
           
