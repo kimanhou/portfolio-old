@@ -8,6 +8,7 @@
     align-items : center;
     margin-top: 30px;
     margin-bottom: 30px;
+    position: relative;
     >.about-text-title-line-before {
         height: 1px;
         width: 0px;
@@ -31,6 +32,10 @@
             background-color: var(--color-off-white);
             transition: width 0.8s;
         }
+    }
+    >.screen-detector-about-title {
+        position: absolute;
+        bottom: -31vh;
     }
     &.active {
         >.about-text-title-line {

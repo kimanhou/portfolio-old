@@ -3,6 +3,7 @@ import Text from '../../LocalisationContext/Text';
 import './AboutPersonalProjects.scss';
 import AboutKeyword from '../AboutKeyword';
 import AboutTitle from '../AboutTitle';
+import FadeInText from '../../FadeInText/FadeInText';
 
 interface IAboutPersonalProjectsProps {
     aboutRef : HTMLDivElement | null;
@@ -11,12 +12,23 @@ interface IAboutPersonalProjectsProps {
 const AboutPersonalProjects : React.FC<IAboutPersonalProjectsProps> = props => {
     return(
         <div className="about-hobbies">
-            <AboutTitle title={<Text english="Personal projects" french="Projets personnels"/>} aboutRef={props.aboutRef}/>
-            &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Portfolio" french="Portfolio"/>}/>
-            <br></br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Coffee" french="Coffee"/>}/>
-            <br></br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Corsica" french="Corse"/>}/>
+            <FadeInText aboutRef={props.aboutRef} noDelay>
+                <AboutTitle title={<Text english="Personal projects" french="Projets personnels"/>} aboutRef={props.aboutRef}/>
+            </FadeInText>
+
+            <FadeInText aboutRef={props.aboutRef} noDelay>
+                &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Portfolio" french="Portfolio"/>}/>
+                <br></br>
+            </FadeInText>
+
+            <FadeInText aboutRef={props.aboutRef} noDelay>
+                &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Coffee" french="Coffee"/>}/>
+                <br></br>
+            </FadeInText>
+
+            <FadeInText aboutRef={props.aboutRef} noDelay>
+                &nbsp;&nbsp;&nbsp;&nbsp;<AboutKeyword text={<Text english="Corsica" french="Corse"/>}/>
+            </FadeInText>
         </div>
     );
 }

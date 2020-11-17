@@ -40,7 +40,7 @@ const IAm : React.FC<IIAmProps> = props => {
         <div className={`i-am ${isVisibleClassname}`}>
             <div className={`i-am-hello-world`}>
                 <div className={`i-am-hello-world-content`}>
-                    Hello world,
+                Hello world,
                 </div>
             </div>
             <div className={`i-am-i-am`}>
