@@ -4,6 +4,7 @@ import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import Home from '../Home/Home';
+import Languages from '../Languages/Languages';
 import Services from '../Services/Services';
 import { SquareNameText } from '../SquareName/SquareNameText';
 import Work from '../Work/Work';

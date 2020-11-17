@@ -1,4 +1,5 @@
 import React from 'react';
+import Languages from '../Languages/Languages';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import './Services.scss';

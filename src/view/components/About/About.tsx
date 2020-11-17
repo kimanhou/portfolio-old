@@ -12,6 +12,7 @@ import AboutLanguages from './Sections/AboutLanguages';
 import AboutHobbies from './Sections/AboutHobbies';
 import AboutEducation from './Sections/AboutEducation';
 import AboutPersonalProjects from './Sections/AboutPersonalProjects';
+import Languages from '../Languages/Languages';
 
 interface IAboutProps {
   isVisible : boolean;

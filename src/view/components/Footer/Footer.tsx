@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useOnScreenResize } from '../../hooks/UseOnScreenResize';
+import Languages from '../Languages/Languages';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import ScreenDetector from '../ScreenDetector/screenDetector';
@@ -67,6 +68,7 @@ const Footer : React.FC<IFooterProps> = props => {
                         <a href="mailto:kimanhou@gmail.com" className={`footer-email pink`}>kimanhou@gmail.com</a>
                     </div>
                 </div>
+                <Languages isWhite={props.isDark} />
                 <div className={`footer-copyright`}>
                     &copy;2020
                 </div>

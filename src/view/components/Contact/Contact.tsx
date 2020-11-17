@@ -5,6 +5,7 @@ import Text from '../LocalisationContext/Text';
 import './Contact.scss';
 import ContactSocial from './ContactSocial';
 import Expand from './Expand';
+import Languages from '../Languages/Languages';
 
 interface IContactProps {
   isVisible : boolean;
