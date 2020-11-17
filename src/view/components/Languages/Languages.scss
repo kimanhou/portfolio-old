@@ -1,23 +1,35 @@
 .languages {
-    >.english, >.french {
+    >.languages-title {
         display: inline-block;
+        font-family: Kiona;
+        font-size: var(--size-font-text);
+        margin-right: 20px;
+        line-height: 40px;
+    }
+    >img {
+        display: inline-block;
+        height: var(--size-font-text);
         cursor: pointer;
-        font-size: 20px;
     }
-    >.underline {
-        transition: transform 0.4s;
-        height: 2px;
-        width: 20px;
-        margin-top: 2px;
-        margin-left: 20px;
-        background-color: var(--color-off-black);
-        &.FR {
-            transform: translateX(25px);
-        }
-        &.EN {
-            transform: translateX(-18px);
-        }
-    }
+    // >.english, >.french {
+    //     display: inline-block;
+    //     cursor: pointer;
+    //     font-size: var(--size-font-text);
+    // }
+    // >.underline {
+    //     transition: transform 0.4s;
+    //     height: 2px;
+    //     width: 20px;
+    //     margin-top: 2px;
+    //     margin-left: 20px;
+    //     background-color: var(--color-off-black);
+    //     &.FR {
+    //         transform: translateX(25px);
+    //     }
+    //     &.EN {
+    //         transform: translateX(-18px);
+    //     }
+    // }
     &.is-white {
         color: var(--color-off-white);
         >.underline {

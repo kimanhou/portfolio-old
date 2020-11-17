@@ -54,7 +54,7 @@
         >.footer-name-and-logo {
             margin-bottom: 30px;
             a {
-                line-height: 40px;
+                line-height: calc(var(--size-font-text) * 2);
             }
             >.footer-name {
                 float: right;
@@ -70,9 +70,9 @@
         >.footer-social-container {
             a {
                 font-family: Kiona;
-                line-height: 40px;
+                line-height: calc(var(--size-font-text) * 2);
                 font-weight: 100;
-                font-size: 20px;
+                font-size: var(--size-font-text);
             }
             >.footer-email-container {
                 width: 250px;

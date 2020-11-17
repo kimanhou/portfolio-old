@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Local from '../LocalisationContext/Local';
+import Text from '../LocalisationContext/Text';
 import { LocalValueContext, SetLocalContext } from '../LocalisationContext/LocalContext';
 import './Languages.scss';
 
@@ -28,8 +29,14 @@ const Languages : React.FC<ILanguagesProps> = props => {
     
     return (
         <div className={`languages ${isWhite}`} onClick={onClick}>
-            <div className={`english`} onClick={() => setLanguageTo(Local.EN)}>EN</div> - <div className={`french`} onClick={() => setLanguageTo(Local.FR)}>FR</div>
-            <div className={`underline ${currentLanguage.getShortName()}`}></div>
+            {/* <div className={`english`} onClick={() => setLanguageTo(Local.EN)}>EN</div> - <div className={`french`} onClick={() => setLanguageTo(Local.FR)}>FR</div>
+            <div className={`underline ${currentLanguage.getShortName()}`}></div> */}
+            <div className={`languages-title`}>
+                <Text english="Language" french="Langue"/>
+            </div>
+            
+            {currentLanguage.getShortName() == 'EN' && <img src='icons/uk-flag.png'/>}
+            {currentLanguage.getShortName() == 'FR' && <img src='icons/french-flag.png'/>}
         </div>
     );
 }
