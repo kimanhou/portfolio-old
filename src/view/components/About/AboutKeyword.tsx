@@ -3,14 +3,16 @@ import './AboutKeyword.scss';
 
 interface IAboutKeywordProps {
     text : React.ReactNode;
+    isPink ?: boolean;
 }
 
 const AboutKeyword : React.FC<IAboutKeywordProps> = props => {
+    var isPinkClassname = props.isPink ? "is-pink" : "";
     return(
-        <span className="about-keyword">
+        <div className={`about-keyword ${isPinkClassname}`}>
             <span className="about-keyword-background"></span>
             {props.text}
-        </span>
+        </div>
     );
 }
 

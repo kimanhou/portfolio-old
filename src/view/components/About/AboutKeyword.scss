@@ -2,19 +2,27 @@
     font-family: Kiona;
     position: relative;
     white-space: nowrap;
+    display: inline-block;
     >.about-keyword-background {
         position: absolute;
-        bottom: -2px;
+        bottom: 4px;
         left: 0;
         width: 100%;
         background-color: var(--color-pink);
         height: calc(var(--size-font-text) / 2);
         z-index: -1;
         transform: skewX(-30deg);
+        transition: background-color 0.4s;
     }
     &:hover {
         >.about-keyword-background {
             animation: grow 0.6s linear;
+        }
+    }
+    &.is-pink {
+        color: var(--color-pink);
+        >.about-keyword-background {
+            background-color: var(--color-light-pink);
         }
     }
 }

@@ -1,3 +1,36 @@
 .about-work {
     margin-bottom: 60px;
+    .border {
+        border: solid 1px var(--color-off-white);
+        text-align: center;
+        padding: 20px;
+        font-family: Kiona;
+        margin-bottom: 30px;
+        transition: color 0.4s, border-color 0.4s;
+        &:hover {
+            color: var(--color-pink);
+            border-color: var(--color-pink);
+            >.border-keywords-container {
+                >.border-keywords {
+                    >.about-keyword {
+                        >.about-keyword-background {
+                            background-color: var(--color-light-pink);
+                        }
+                    }
+                }
+            }
+        }
+        >.border-keywords-container {
+            position: relative;
+            height: calc(var(--size-font-text) * 6);
+            >.border-keywords {
+                text-align: left;
+                font-family: Timeless;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    }
 }

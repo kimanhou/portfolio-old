@@ -1,16 +1,16 @@
 import React from 'react';
 import FadeInText from '../../../FadeInText/FadeInText';
-import './Hobby.scss';
+import './Language.scss';
 
-interface IHobbyProps {
+interface ILanguageProps {
     aboutRef : HTMLDivElement | null;
     imgSrc : string;
 }
 
-const Hobby : React.FC<IHobbyProps> = props => {
+const Language : React.FC<ILanguageProps> = props => {
     
     return(
-        <div className={`hobby`}>
+        <div className={`language`}>
             <FadeInText aboutRef={props.aboutRef}>
                 <img src={props.imgSrc}/>
                 {props.children}
@@ -19,4 +19,4 @@ const Hobby : React.FC<IHobbyProps> = props => {
     );
 }
 
-export default Hobby;
+export default Language;
