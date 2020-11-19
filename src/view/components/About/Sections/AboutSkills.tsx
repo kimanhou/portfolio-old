@@ -77,7 +77,7 @@ const AboutSkills : React.FC<IAboutSkillsProps> = props => {
             </FadeInText>
 
             <FadeInText aboutRef={props.aboutRef}>
-            <div className={`column-left`}>
+                <div className={`column-left`}>
                     <Text english="Soft skills" french="Soft skills"/>
                     <div className={`underline`}></div>
                 </div>

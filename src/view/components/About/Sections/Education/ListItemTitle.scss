@@ -1,0 +1,13 @@
+.about-education-list-item-title {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    text-align: left;
+    transition: color 0.4s;
+    >.fade-in-text {
+        >.kiona {
+            font-family: Kiona;
+            font-size: calc(var(--size-font-text) * 1.2);
+        }
+    }
+}

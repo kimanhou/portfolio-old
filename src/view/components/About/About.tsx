@@ -6,14 +6,12 @@ import SquareName from '../SquareName/SquareName';
 import { SquareNameText } from '../SquareName/SquareNameText';
 import './About.scss';
 import AboutCurrentStatus from './Sections/AboutCurrentStatus';
-import AboutTitle from './AboutTitle';
-import AboutWork from './Sections/AboutWork';
-import AboutLanguages from './Sections/Languages/AboutLanguages';
-import AboutHobbies from './Sections/Hobbies/AboutHobbies';
-import AboutEducation from './Sections/AboutEducation';
 import AboutPersonalProjects from './Sections/AboutPersonalProjects';
-import Languages from '../Languages/Languages';
 import AboutSkills from './Sections/AboutSkills';
+import AboutWork from './Sections/AboutWork';
+import AboutEducation from './Sections/Education/AboutEducation';
+import AboutHobbies from './Sections/Hobbies/AboutHobbies';
+import AboutLanguages from './Sections/Languages/AboutLanguages';
 
 interface IAboutProps {
   isVisible : boolean;
@@ -31,7 +29,7 @@ const About : React.FC<IAboutProps> = props => {
       <Logo isWhite={true} isAbout={true}/>
       <SquareName isWhite={true} isLeft={props.isVisible} displayedText={props.displayedSquareNameText} setDisplayedText={props.setDisplayedSquareNameText}/>
       <div className={`about-portrait`}>
-        <img src="photos/portrait-blur.png" />
+        <img src="photos/portrait.png" />
         <div className={`photo-credits`}>
           <a href="https://sorensolkaer.com/" target='_blank' ><Text english="Photo credits : Søren Solkær" french="Crédits photo : Søren Solkær"/></a>
         </div>

@@ -17,8 +17,8 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
             </FadeInText>
             <FadeInText aboutRef={props.aboutRef}>
                 <div className={`border`}>
-                    <Text english="Full-stack developer with 4 years of experience in finance in London" 
-                        french="Développeure full-stack avec 4 ans d'expérience en finance à Londres"/>
+                    <Text english="2015 - 2019 Full-stack developer with 4 years of experience in finance in London" 
+                        french="2015 - 2019 Développeure full-stack avec 4 ans d'expérience en finance à Londres"/>
                     <br></br>
                     <div className={`border-keywords-container`}>
                         <div className={`border-keywords`}>
