@@ -139,5 +139,8 @@
                 }
             }
         }
+        >.contact-social-container {
+            bottom: calc(var(--size-margin) * 6);
+        }
     }
 }
