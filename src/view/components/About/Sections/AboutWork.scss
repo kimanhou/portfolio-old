@@ -54,3 +54,17 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .about-work {
+        .border {
+            padding: 10px;
+            >.border-keywords-container {
+                height: calc(var(--size-font-text) * 10);
+                >.border-keywords {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

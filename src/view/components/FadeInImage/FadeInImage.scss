@@ -28,3 +28,9 @@
         width: 50vh;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .fade-in-image {
+        display: none;
+    }
+}

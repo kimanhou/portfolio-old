@@ -15,9 +15,10 @@
         height: 100vh;
         transform: translateZ(-1px) scale(2); // scale(1 + (translateZ * -1) / perspective) with perspective=1px
         // see https://keithclark.co.uk/articles/pure-css-parallax-websites/
+        z-index: -1;
         >img {
             position: absolute;
-            right: 80px;
+            right: calc(var(--size-margin) + (var(--size-font-text) * 1.5));
             bottom: 0;
             height: 85vh;
             display: inline-block;
@@ -60,7 +61,7 @@
         line-height: calc(var(--size-font-text) * 1.7);
         position: absolute;
         left: var(--size-margin);
-        right: calc(50px + 50vh + 50px);
+        right: calc(var(--size-margin) + 50vh + var(--size-margin));
         top: 90vh;
         height: 100vh;
         a {
@@ -80,5 +81,13 @@
     }
     100%{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        >.about-text {
+            right: var(--size-margin);
+        }
     }
 }

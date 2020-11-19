@@ -32,7 +32,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
             <FadeInImage aboutRef={props.aboutRef} imgSrc='photos/keio.png'/>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
-                        <Text english="Sep 2013 - Sep 2015" french="Sep 2013 - Sep 2015"/>
+                        <Text english="Sep&nbsp;2013 - Sep&nbsp;2015" french="Sep&nbsp;2013 - Sep&nbsp;2015"/>
                     </AboutEducationDate>
                 </div>
                 <div className={`column-right`}>
@@ -70,7 +70,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
             <FadeInImage aboutRef={props.aboutRef} imgSrc='photos/centralemarseille.png'/>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
-                        <Text english="Sep 2009 - Sep 2011" french="Sep 2009 - Sep 2011"/>
+                        <Text english="Sep&nbsp;2009 - Sep&nbsp;2011" french="Sep&nbsp;2009 - Sep&nbsp;2011"/>
                     </AboutEducationDate>
                 </div>
                 <div className={`column-right`}>
@@ -94,7 +94,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
             <div className={`one-line`}>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
-                        <Text english="Sep 2011 - Sep 2013" french="Sep 2011 - Sep 2013"/>
+                        <Text english="Sep&nbsp;2011 - Sep&nbsp;2013" french="Sep&nbsp;2011 - Sep&nbsp;2013"/>
                     </AboutEducationDate>
                 </div>
                 <div className={`column-right`}>
@@ -109,7 +109,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
             <div className={`one-line`}>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
-                        <Text english="Jun 2009" french="Jun 2009"/>
+                        <Text english="Jun&nbsp;2009" french="Jun&nbsp;2009"/>
                     </AboutEducationDate>
                 </div>
                 <div className={`column-right`}>

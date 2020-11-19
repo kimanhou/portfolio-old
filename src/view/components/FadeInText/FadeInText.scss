@@ -18,3 +18,11 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .fade-in-text {
+        >.screen-detector-fade-in-text {
+            bottom: 0;
+        }
+    }
+}
