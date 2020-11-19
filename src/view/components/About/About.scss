@@ -27,7 +27,7 @@
             position: absolute;
             font-family: Kiona;
             font-size: 15px;
-            right: 50px;
+            right: var(--size-margin);
             bottom: 0;
             transform: rotate(-90deg) translateX(100%) translateY(-100%);
             transform-origin: top right;
@@ -59,7 +59,7 @@
         font-size: var(--size-font-text);
         line-height: calc(var(--size-font-text) * 1.7);
         position: absolute;
-        left: 50px;
+        left: var(--size-margin);
         right: calc(50px + 50vh + 50px);
         top: 90vh;
         height: 100vh;

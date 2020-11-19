@@ -1,7 +1,7 @@
 .square-name {
     position: absolute;
-    bottom: 100px;
-    left: calc(100vw - 50px - var(--size-nav-width));
+    bottom: calc(var(--size-margin) * 2);
+    left: calc(100vw - var(--size-margin) - var(--size-nav-width));
     width: var(--size-nav-width);
     height: var(--size-nav-width);
     border: solid 2px var(--color-off-black);
@@ -96,8 +96,14 @@
         color: var(--color-off-white);
     }
     &.is-left {
-        left: 50px;
+        left: var(--size-margin);
         right: unset;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .square-name {
+        font-size: 16vw;
     }
 }
 

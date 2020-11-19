@@ -1,14 +1,14 @@
 .i-am {
     position: absolute;
-    bottom: 100px;
-    left: 50px;
+    bottom: calc(var(--size-margin) * 2);
+    left: var(--size-margin);
     font-family: Timeless;
-    font-size: 30px;
+    font-size: calc(var(--size-font-text) * 1.5);
     text-align: left;
-    width: calc(100% - 100px - var(--size-nav-width) - 4px);
+    width: calc(100% - (var(--size-margin) * 2) - var(--size-nav-width) - 4px);
     >.i-am-hello-world {
         overflow: hidden;
-        height: 40px;
+        height: calc(var(--size-font-text) * 2);;
         position: relative;
         >.i-am-hello-world-content {
             position: absolute;
@@ -19,7 +19,7 @@
     }
     >.i-am-i-am {
         overflow: hidden;
-        height: 40px;
+        height: calc(var(--size-font-text) * 2);
         position: relative;
         line-height: 1em;
         >.i-am-i-am-content {
@@ -29,12 +29,26 @@
             animation: textGoesUp 0.2s linear 1s forwards;
             >.i-am-cursor {
                 background-color: var(--color-off-black);
-                height: 40px;
+                height: calc(var(--size-font-text) * 2);
                 width: 25px;
                 display: inline-block;
                 vertical-align: text-bottom;
                 animation: flash 1s linear 0s infinite;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .i-am {
+        top: 40%;
+        left: var(--size-margin);
+        width: 100%;
+        >.i-am-hello-world {
+            height: 1.5em;
+        }
+        >.i-am-i-am {
+            height: 2em;
         }
     }
 }

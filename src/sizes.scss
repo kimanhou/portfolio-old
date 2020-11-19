@@ -2,4 +2,14 @@
     --size-nav-height: 14vh;
     --size-nav-width: 25vw;
     --size-font-text: 20px;
+    --size-margin: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    :root{
+        --size-nav-height: 14vh;
+        --size-nav-width: 40vw;
+        --size-font-text: 16px;
+        --size-margin: 10px;
+    }
 }

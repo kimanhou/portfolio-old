@@ -36,3 +36,13 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .navigation-link {
+        display: block;
+        margin-right: var(--size-margin);
+        >a {
+            font-size: 20px;
+        }
+    }
+}

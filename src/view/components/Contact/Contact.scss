@@ -81,8 +81,8 @@
     >.contact-social-container {
         position: absolute;
         z-index:2;
-        right: 50px;
-        bottom: 50px;
+        right: var(--size-margin);
+        bottom: var(--size-margin);
         transform: rotate(-90deg) translateX(100%) translateY(-100%);
         transform-origin: top right;
         >.contact-social-expand {

@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     top: 0;
-    left: -50px;
+    left: calc(var(--size-margin) * (-1));
     transform: translateZ(-1px) scale(2);
     opacity: 0;
     transition: opacity 1s;
@@ -23,7 +23,7 @@
     }
     >img {
         position: absolute;
-        right: 50px;
+        right: var(--size-margin);
         top: calc(var(--size-font-text) * 6);
         width: 50vh;
     }
