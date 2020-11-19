@@ -1,11 +1,11 @@
 .contact-social {
     display: inline-block;
     vertical-align: top;
-    margin-left: 40px;
+    margin-left: calc(var(--size-font-text) * 2);
     position: relative;
     >a {
         font-family: Kiona;
-        font-size: 15px;
+        font-size: calc(var(--size-font-text) / 1.67);
         width: 100%;
     }
     >.text {
