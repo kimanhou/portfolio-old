@@ -86,8 +86,20 @@
 
 @media screen and (max-width: 600px) {
     .about {
+        >.about-portrait {
+            opacity: 0;
+            transition: opacity 0.8s;
+            &.is-portrait-visible{
+                opacity: 1;
+            }
+            >.portrait-detector{
+                position: absolute;
+                top: 35%;
+            }
+        }
         >.about-text {
             right: var(--size-margin);
+            top: 110vh;
         }
     }
 }

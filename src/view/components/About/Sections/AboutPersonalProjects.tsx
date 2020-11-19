@@ -11,7 +11,7 @@ interface IAboutPersonalProjectsProps {
 
 const AboutPersonalProjects : React.FC<IAboutPersonalProjectsProps> = props => {
     return(
-        <div className="about-hobbies">
+        <div className="about-personal-projects">
             <FadeInText aboutRef={props.aboutRef} noDelay>
                 <AboutTitle title={<Text english="Personal projects" french="Projets personnels"/>} aboutRef={props.aboutRef}/>
             </FadeInText>

@@ -24,5 +24,10 @@
         >.screen-detector-fade-in-text {
             bottom: 0;
         }
+        &.no-delay {
+            >.screen-detector-fade-in-text {
+                bottom: 20px;
+            }
+        }
     }
 }
