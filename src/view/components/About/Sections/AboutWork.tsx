@@ -4,21 +4,33 @@ import './AboutWork.scss';
 import AboutKeyword from '../AboutKeyword';
 import AboutTitle from '../AboutTitle';
 import FadeInText from '../../FadeInText/FadeInText';
+import ScreenDetector from '../../ScreenDetector/screenDetector';
+import FadeInImage from '../../FadeInImage/FadeInImage';
 
 interface IAboutWorkProps {
     aboutRef : HTMLDivElement | null;
 }
 
 const AboutWork : React.FC<IAboutWorkProps> = props => {
+    var [onActiveClassname, setOnActiveClassname] = useState("");
+    const onActive = () => {
+        setOnActiveClassname("active");
+    }
+
+    const onUnactive = () => {
+        setOnActiveClassname("");
+    }
+
     return(
         <div className="about-work">
+            <FadeInImage aboutRef={props.aboutRef} imgSrc='photos/socgen.jpg'/>
             <FadeInText aboutRef={props.aboutRef}>
                 <AboutTitle title={<Text english="Work" french="Expérience"/>} aboutRef={props.aboutRef}/>
             </FadeInText>
             <FadeInText aboutRef={props.aboutRef}>
                 <div className={`border`}>
-                    <Text english="2015 - 2019 Full-stack developer with 4 years of experience in finance in London" 
-                        french="2015 - 2019 Développeure full-stack avec 4 ans d'expérience en finance à Londres"/>
+                    <Text english="2015 - 2019 Full-stack developer with 4 years of experience at Société Générale in London" 
+                        french="2015 - 2019 Développeure full-stack avec 4 ans d'expérience à la Société Générale à Londres"/>
                     <br></br>
                     <div className={`border-keywords-container`}>
                         <div className={`border-keywords`}>
@@ -34,12 +46,14 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
                     </div>
                 </div>
             </FadeInText>
+
             <FadeInText aboutRef={props.aboutRef}>
                 &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I worked on an internal application used by the traders and sales of the Commodities department to enter their trades and manage their orders." 
                     french="J'ai travaillé sur une application interne utilisée par les traders et les sales du département Commodités pour rentrer leurs trades et suivre leurs ordres."/>
                 <AboutKeyword text={<Text english="" french=""/>}/>
                     <Text english="" french="" />
             </FadeInText>
+
             <FadeInText aboutRef={props.aboutRef}>
                 &nbsp;&nbsp;&nbsp;&nbsp;<Text english="The team - organised within an " 
                     french="L'équipe - organisée selon une "/>
@@ -48,7 +62,7 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
                     french=" - suivait un planning d'une release par semaine, avec pour objectif d'atteindre la "/>
                     <AboutKeyword text={<Text english="continuous delivery" french="livraison continue"/>}/>
                     <Text english=". To this end, I took part in improving the release process, reaching no downtime for part of the services. Our software delivery was user-centric with extensive support provided." 
-                          french=". À ces fins, j'ai activement conttribué à améliorer le processus de mise en production, une partie des services pouvant ainsi être délivrés sans coupure. Nous veillions également à apporter aux utilisateurs un support soigné." />
+                          french=". À ces fins, j'ai activement contribué à améliorer le processus de mise en production, une partie des services pouvant ainsi être délivrés sans coupure. Nous veillions également à apporter aux utilisateurs un support soigné." />
             </FadeInText>
             <FadeInText aboutRef={props.aboutRef}>
                 &nbsp;&nbsp;&nbsp;&nbsp;<Text english="As a side project, I developed a " 

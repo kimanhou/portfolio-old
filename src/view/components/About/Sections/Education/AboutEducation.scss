@@ -1,5 +1,6 @@
 .about-education {
     margin-bottom: 60px;
+    position: relative;
     .border {
         border: solid 1px var(--color-off-white);
         text-align: center;
@@ -15,6 +16,7 @@
     >.one-line {
         margin-bottom: calc(var(--size-font-text) * 2);
         font-size: var(--size-font-text);
+        position: relative;
         >.column-left, >.column-right {
             display: inline-block;
             vertical-align: top;

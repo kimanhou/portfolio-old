@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInImage from '../../../FadeInImage/FadeInImage';
 import FadeInText from '../../../FadeInText/FadeInText';
 import Text from '../../../LocalisationContext/Text';
 import AboutTitle from '../../AboutTitle';
@@ -26,7 +27,9 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
                 </div>
             </FadeInText>
 
+            
             <div className={`one-line`}>
+            <FadeInImage aboutRef={props.aboutRef} imgSrc='photos/keio.png'/>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
                         <Text english="Sep 2013 - Sep 2015" french="Sep 2013 - Sep 2015"/>
@@ -64,6 +67,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
             </div>
 
             <div className={`one-line`}>
+            <FadeInImage aboutRef={props.aboutRef} imgSrc='photos/centralemarseille.png'/>
                 <div className={`column-left`}>
                     <AboutEducationDate aboutRef={props.aboutRef}>
                         <Text english="Sep 2009 - Sep 2011" french="Sep 2009 - Sep 2011"/>
