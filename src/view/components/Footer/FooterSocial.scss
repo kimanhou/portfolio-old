@@ -1,12 +1,12 @@
 .footer-social {
     display: inline-block;
     vertical-align: top;
-    margin-right: 20px;
+    margin-right: var(--size-font-text);
     transition: transform 0.4s;
     >a {
         >img {
-            height: 50px;
-            width: 50px;
+            height: calc(var(--size-font-text) * 2.5);
+            width: calc(var(--size-font-text) * 2.5);
         }
     }
     &:hover {
