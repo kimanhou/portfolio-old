@@ -14,7 +14,7 @@ const AboutHobbies : React.FC<IAboutHobbiesProps> = props => {
     return(
         <div className="about-hobbies">
             <FadeInText aboutRef={props.aboutRef}>
-                <AboutTitle title={<Text english="Hobbies" french="Hobbies"/>} aboutRef={props.aboutRef}/>
+                <AboutTitle title={<Text english="Hobbies" french="Loisirs"/>} aboutRef={props.aboutRef}/>
             </FadeInText>
             <Hobby aboutRef={props.aboutRef} imgSrc='icons/travel.png' >
                 <AboutKeyword text={<Text english="Nomad." french="Nomade."/>}/>

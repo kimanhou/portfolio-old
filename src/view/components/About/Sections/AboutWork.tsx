@@ -29,7 +29,7 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
                             <Text english=",&nbsp;&nbsp; " french=",&nbsp;&nbsp; "/>
                             <AboutKeyword text={<Text english="Sybase" french="Sybase"/>}/>
                             <br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Version control : &nbsp;&nbsp;" french="Gestion de versions: &nbsp;&nbsp;"/><AboutKeyword text={<Text english="Git" french="Git"/>}/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Version control : &nbsp;&nbsp;" french="Gestion de versions: &nbsp;&nbsp;"/><AboutKeyword text={<Text english="Git, TFS" french="Git, TFS"/>}/>
                         </div>
                     </div>
                 </div>

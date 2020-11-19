@@ -1,3 +1,41 @@
 .about-skills {
     margin-bottom: 60px;
+    >.fade-in-text {
+        margin-bottom: var(--size-font-text);
+        >.column-left, >.column-right {
+            display: inline-block;
+            vertical-align: top;
+            font-family: Kiona;
+        }
+        >.column-left {
+            width: 40%;
+            text-align: right;
+            font-size: var(--size-font-text);
+            transition: color 0.4s;
+            >.underline {
+                width: 0;
+                height: 1px;
+                background-color: var(--color-pink);
+                transition: width 0.8s;
+            }
+        }
+        >.column-right {
+            width: calc(60% - 30px);
+            margin-left: 30px;
+            text-align: left;
+            font-size: calc(var(--size-font-text) * 1.2);
+            transition: color 0.4s;
+        }
+        &:hover {
+            >.column-left {
+                color: var(--color-pink);
+                >.underline {
+                    width: 100%;
+                }
+            }
+            >.column-right {
+                color: var(--color-pink);
+            }
+        }
+    }
 }

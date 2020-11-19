@@ -12,7 +12,6 @@
         pointer-events:none;
         background-position:50%;
         pointer-events:none;
-        animation:noise 1s steps(2) infinite;
     }
     >.contact-content {
         position: absolute;
@@ -102,6 +101,9 @@
         }
     }
     &.is-visible {
+        >.contact-background {
+            animation:noise 1s steps(2) infinite;
+        }
         >.contact-content {
             >.contact-intro {
                 >.contact-intro-line {
