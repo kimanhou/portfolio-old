@@ -50,7 +50,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
                     </AboutEducationListItem>
 
                     <AboutEducationListItem aboutRef={props.aboutRef} imgSrc='icons/web-design.png' link='http://jesto.co.jp/'>
-                        <Text english="Internship at Jesto, a web design agency" french="Stage à Jesto, une agence de web design"/>
+                        <Text english="Internship at Jesto, web design agency" french="Stage à Jesto, agence de web design"/>
                     </AboutEducationListItem>
 
                     <AboutEducationListItem aboutRef={props.aboutRef} imgSrc='icons/chemistry.png' link='https://www.st.keio.ac.jp/en/tprofile/chem/suenaga.html'>
@@ -115,7 +115,7 @@ const AboutEducation : React.FC<IAboutEducationProps> = props => {
                 <div className={`column-right`}>
                     <ListItemTitle aboutRef={props.aboutRef}>
                         <span className={`kiona`}><Text english="High school diploma with honors at Petit Val, Sucy en Brie" 
-                                                french="Baccalauréat S avec mention très bien en option Europe à Petit Val, Sucy en Brie"/>
+                                                french="Baccalauréat S avec mention très bien en option Europe à Petit Val, Sucy en Brie (94)"/>
                         </span>
                     </ListItemTitle>
                 </div>

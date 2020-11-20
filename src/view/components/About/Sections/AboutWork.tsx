@@ -34,14 +34,14 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
                     <br></br>
                     <div className={`border-keywords-container`}>
                         <div className={`border-keywords`}>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Language : &nbsp;&nbsp;" french="Langage: &nbsp;&nbsp;"/><AboutKeyword text={<Text english="C#" french="C#"/>}/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Language : &nbsp;&nbsp;" french="Langage : &nbsp;&nbsp;"/><AboutKeyword text={<Text english="C#" french="C#"/>}/>
                             <br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Database : &nbsp;&nbsp;" french="Base de données: &nbsp;&nbsp;"/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Database : &nbsp;&nbsp;" french="Base de données : &nbsp;&nbsp;"/>
                             <AboutKeyword text={<Text english="SQL Server" french="SQL Server"/>}/>
                             <Text english=",&nbsp;&nbsp; " french=",&nbsp;&nbsp; "/>
                             <AboutKeyword text={<Text english="Sybase" french="Sybase"/>}/>
                             <br></br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Version control : &nbsp;&nbsp;" french="Gestion de versions: &nbsp;&nbsp;"/><AboutKeyword text={<Text english="Git, TFS" french="Git, TFS"/>}/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<Text english="Version control : &nbsp;&nbsp;" french="Gestion de versions : &nbsp;&nbsp;"/><AboutKeyword text={<Text english="Git, TFS" french="Git, TFS"/>}/>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const AboutWork : React.FC<IAboutWorkProps> = props => {
             </FadeInText>
             <FadeInText aboutRef={props.aboutRef}>
                 &nbsp;&nbsp;&nbsp;&nbsp;<Text english="As a side project, I developed a " 
-                    french="Sur le côté, j'ai développé un "/>
+                    french="En parallèle, j'ai développé un "/>
                     <AboutKeyword text={<Text english="bot" french="bot"/>}/>
                     <Text english=" to allow users to check the status of their operations. I also took part in the CTY " 
                     french=" pour permettre aux utilisateurs de vérifier le status de leurs opérations. J'ai également participé au "/>

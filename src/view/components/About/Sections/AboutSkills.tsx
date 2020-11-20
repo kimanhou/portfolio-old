@@ -82,7 +82,7 @@ const AboutSkills : React.FC<IAboutSkillsProps> = props => {
                     <div className={`underline`}></div>
                 </div>
                 <div className={`column-right`}>
-                    <Text english="independent, quick learner, analytical mind" french="autonome, apprend vite, esprit de synthèse"/>
+                    <Text english="independent, quick learner, analytical mind" french="autonome, apprend vite, esprit d'analyse et de synthèse"/>
                 </div>
             </FadeInText>
         </div>
