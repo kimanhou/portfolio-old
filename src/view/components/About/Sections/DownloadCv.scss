@@ -1,1 +1,52 @@
-.download-cv {}
+.download-cv {
+    font-family: Kiona;
+    font-size: calc(var(--size-font-text) * 1.5);
+    margin-bottom: 60px;
+    text-align: center;
+    >a {
+        >.here {
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 10%;
+            font-size: calc(var(--size-font-text) * 1.5);
+            font-family: Kiona;
+            color: var(--color-off-white);
+            border: none;
+            margin-top: var(--size-margin);
+            padding: var(--size-font-text);
+            position: relative;
+            &:hover {
+                >.background {
+                    >.hover{
+                        top: 0; left: 0;
+                    }
+                }
+            }
+            >.background {
+                position: absolute;
+                border-radius: 10%;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                overflow: hidden;
+                >.normal{
+                    border-radius: 10%;
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    background-color: var(--color-pink);
+                }
+                >.hover{
+                    border-radius: 10%;
+                    position: absolute;
+                    top: -100%; left: -100%;
+                    width: 100%; height: 100%;
+                    background-color: var(--color-light-pink);
+                    transition: top 0.8s, left 0.8s;
+                }
+            }
+        }
+    }
+}

@@ -29,8 +29,6 @@ const Languages : React.FC<ILanguagesProps> = props => {
     
     return (
         <div className={`languages ${isWhite}`} onClick={onClick}>
-            {/* <div className={`english`} onClick={() => setLanguageTo(Local.EN)}>EN</div> - <div className={`french`} onClick={() => setLanguageTo(Local.FR)}>FR</div>
-            <div className={`underline ${currentLanguage.getShortName()}`}></div> */}
             <div className={`languages-title`}>
                 <Text english="Language" french="Langue"/>
             </div>

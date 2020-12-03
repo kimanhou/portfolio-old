@@ -10,6 +10,7 @@ import AboutCurrentStatus from './Sections/AboutCurrentStatus';
 import AboutPersonalProjects from './Sections/AboutPersonalProjects';
 import AboutSkills from './Sections/AboutSkills';
 import AboutWork from './Sections/AboutWork';
+import DownloadCv from './Sections/DownloadCv';
 import AboutEducation from './Sections/Education/AboutEducation';
 import AboutHobbies from './Sections/Hobbies/AboutHobbies';
 import AboutLanguages from './Sections/Languages/AboutLanguages';
@@ -47,6 +48,7 @@ const About : React.FC<IAboutProps> = props => {
           <AboutLanguages aboutRef={aboutRef}/>
           <AboutHobbies aboutRef={aboutRef}/>
           <AboutPersonalProjects aboutRef={aboutRef}/>
+          <DownloadCv/>
       </div>
     </div>
   )
