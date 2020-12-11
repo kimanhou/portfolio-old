@@ -40,8 +40,8 @@ const Contact : React.FC<IContactProps> = props => {
         </div>
         <div className={`contact-email`}>
             <div className={`contact-email-content`}>
-              <a href="mailto:kimanhou@gmail.com" className={`contact-email-content-text outline`}>kimanhou@gmail.com</a>
-              <a href="mailto:kimanhou@gmail.com" className={`contact-email-content-text fill`}>kimanhou@gmail.com</a>
+              <a href="mailto:kanguyenlu@gmail.com" className={`contact-email-content-text outline`}>kanguyenlu@gmail.com</a>
+              <a href="mailto:kanguyenlu@gmail.com" className={`contact-email-content-text fill`}>kanguyenlu@gmail.com</a>
             </div>
         </div>
       </div>
