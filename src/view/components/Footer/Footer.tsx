@@ -64,8 +64,8 @@ const Footer : React.FC<IFooterProps> = props => {
                     <FooterSocial iconUrl={github} link="https://github.com/kimanhou" />
                     <FooterSocial iconUrl={linkedin} link="https://www.linkedin.com/in/kanguyenlu/" />
                     <div className={`footer-email-container`}>
-                        <a href="mailto:kimanhou@gmail.com" className={`footer-email`}>kimanhou@gmail.com</a>
-                        <a href="mailto:kimanhou@gmail.com" className={`footer-email pink`}>kimanhou@gmail.com</a>
+                        <a href="mailto:kanguyenlu@gmail.com" className={`footer-email`}>kanguyenlu@gmail.com</a>
+                        <a href="mailto:kanguyenlu@gmail.com" className={`footer-email pink`}>kanguyenlu@gmail.com</a>
                     </div>
                 </div>
                 <Languages isWhite={props.isDark} />
