@@ -70,7 +70,7 @@ const Footer : React.FC<IFooterProps> = props => {
                 </div>
                 <Languages isWhite={props.isDark} />
                 <div className={`footer-copyright`}>
-                    &copy;2020
+                    &copy;2021
                 </div>
             </div>
             <div className={`footer-padding`} style={{height}}>
