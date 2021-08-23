@@ -75,12 +75,14 @@
                 font-size: var(--size-font-text);
             }
             >.footer-email-container {
-                width: 250px;
+                width: 265px;
+                position: relative;
                 >.footer-email {
                     &.pink {
                         color: var(--color-pink);
-                        position: absolute;
-                        left: var(--size-margin);
+                        position: absolute;    
+                        top: 0;
+                        left: 0;
                         width: 0px;
                         overflow: hidden;
                         transition: width 0.8s;
@@ -89,7 +91,7 @@
                 &:hover {
                     >.footer-email {
                         &.pink {
-                            width: 250px;
+                            width: 265px;
                         }
                     }
                 }

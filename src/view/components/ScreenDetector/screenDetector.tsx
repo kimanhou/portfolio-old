@@ -13,15 +13,6 @@ const ScreenDetector : React.FC<IScreenDetectorProps> = props => {
     const isElementInViewport = () => {
         const el = detectorRef.current!;
         var rect = el.getBoundingClientRect();
-    
-        if(props.debug){
-            console.log(`rect.bottom : ${rect.bottom}`);
-            console.log(`rect.right : ${rect.right}`);
-            console.log(`window.innerHeight : ${window.innerHeight}`);
-            console.log(`window.innerWidth : ${window.innerWidth}`);
-            console.log(`document.documentElement.clientHeight : ${document.documentElement.clientHeight}`);
-            console.log(`document.documentElement.clientWidth : ${document.documentElement.clientWidth}`);
-        }
 
         return (
             rect.top >= 0 &&
@@ -52,8 +43,8 @@ const ScreenDetector : React.FC<IScreenDetectorProps> = props => {
             };
         }
         else{
-            addEventListener('scroll', detects, false);
-            return () => removeEventListener('scroll', detects, false);
+            window.addEventListener('scroll', detects, false);
+            return () => window.removeEventListener('scroll', detects, false);
         }
     }, [props.scrollRef]);
 

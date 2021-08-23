@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { isMobile } from '../../hooks/UseMediaQuery';
+import { useIsMobile } from '../../hooks/UseMediaQuery';
 import './IAm.scss';
 
 interface IIAmProps {
@@ -37,7 +37,7 @@ const IAm : React.FC<IIAmProps> = props => {
         setTimeout(() => writeText(0, 0), 2000);
     }, []);
 
-    const isMobileBool = isMobile();
+    const isMobileBool = useIsMobile();
 
     return (
         <div className={`i-am ${isVisibleClassname}`}>
