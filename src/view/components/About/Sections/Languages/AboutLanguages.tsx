@@ -19,7 +19,7 @@ const AboutLanguages : React.FC<IAboutLanguagesProps> = props => {
 
             <Language aboutRef={props.aboutRef} imgSrc='icons/french-flag.png'>
                 <AboutKeyword text={<Text english="French." french="Français."/>}/>
-                <Text english="&nbsp;&nbsp; My bain mainly functions in French." french="&nbsp;&nbsp; Mon cerveau fonctionne principalement en français."/>
+                <Text english="&nbsp;&nbsp; My brain mainly functions in French." french="&nbsp;&nbsp; Mon cerveau fonctionne principalement en français."/>
             </Language>
 
             <Language aboutRef={props.aboutRef} imgSrc='icons/uk-flag.png'>

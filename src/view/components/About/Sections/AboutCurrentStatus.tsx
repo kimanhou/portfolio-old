@@ -39,7 +39,7 @@ const AboutCurrentStatus : React.FC<IAboutCurrentStatusProps> = props => {
             <FadeInText aboutRef={props.aboutRef}>
                   &nbsp;&nbsp;&nbsp;&nbsp;<Text english="I am currently looking for "
                         french="Je suis actuellement à la recherche d'" />
-                  <AboutKeyword text={<Text english="short-term opportunities" french="opportunités de courte durée"/>} />
+                  <AboutKeyword text={<Text english="opportunities to return to Tokyo to work." french="opportunités pour retourner à Tokyo travailler"/>} />
                   <Text english="." french="."/>
             </FadeInText>
         </div>
