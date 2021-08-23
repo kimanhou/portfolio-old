@@ -6,7 +6,7 @@ import App from './App';
 const AppRoot : React.FunctionComponent = props => {
 
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <LocalContext>
         <App />
       </LocalContext>
