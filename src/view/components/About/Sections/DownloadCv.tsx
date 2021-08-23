@@ -9,7 +9,7 @@ interface IDownloadCvProps {
 
 const DownloadCv : React.FC<IDownloadCvProps> = props => {
     var currentLanguage = useContext(LocalValueContext);
-    var cv = (currentLanguage.getShortName() == 'EN') ? "cv/CV-EN.pdf" : "cv/CV-FR.pdf";
+    var cv = (currentLanguage.getShortName() == 'EN') ? "cv/KimAnhNguyen-CV-EN.pdf" : "cv/KimAnhNguyen-CV-FR.pdf";
     
     return(
         <div className={`download-cv`}>
